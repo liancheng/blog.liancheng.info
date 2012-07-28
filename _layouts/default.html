@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"></meta>
     <title>:wq ~/notes &raquo; {{ page.title }}</title>
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}"></meta>
+    {% endif %}
+    <meta name="author" content="{{ site.author.name }}"></meta>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css" type="text/css" />
     <link rel="stylesheet" href="/static/css/main.css" type="text/css" />
@@ -10,35 +14,30 @@
 
   <body>
     <div class="container-fluid">
-
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a href="/" class="brand">:wq ~/notes</a>
-            <div class="nav-collapse">
-              <ul class="nav">
-                <li class="active"><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
-                <li><a href="/about.html"><i class="icon-user icon-white"></i> About Me</a></li>
-              </ul>
-            </div>
-          </div>
+      <div class="row-fluid">
+        <div class="page-header">
+          <h1>
+            <a href="/">:wq ~/notes</a>
+            <small>Bettern memory than bad HDD</small>
+          </h1>
         </div>
       </div>
 
       <div class="row-fluid">
-
         <div class="span9">
           {{ content }}
         </div>
 
         <div class="span3">
-          <div class="well sidebar-nav">
+          <div class="sidebar-nav">
             <ul class="nav nav-list">
+
+              <li class="nav-header">
+                <i class="icon-user"></i> Contact
+              </li>
+              <li>
+                <a href="/about.html">About me</a>
+              </li>
 
               <li class="nav-header">
                 <i class="icon-folder-open"></i>
