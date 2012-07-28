@@ -1,0 +1,36 @@
+blockquote {
+  background: url("/static/images/blockquote.gif") no-repeat scroll 0px 5px transparent;
+  color: rgb(116, 116, 116);
+  padding-left: 35px;
+  border: inherit;
+}
+
+
+blockquote p {
+  font-size: inherit;
+}
+
+code {
+  padding: inherit;
+  color: inherit;
+  background-color: inherit;
+  border-width: inherit;
+  border-style: inherit;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: url("/static/images/glyphicons-halflings.png");
+}
+
+.icon-white {
+  background-image: url("/static/images/glyphicons-halflings-white.png");
+}
+
+body {
+  padding-top: 60px;
+}
+
+div.navbar ul.nav {
+  padding-left: 0px;
+}
