@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="row-fluid">
+  <div class="span9">
+    <div class="post">
+      {% assign the_post = page %}
+      {% include post_header %}
+      {{ content }}
+    </div>
+  </div>
+  <div class="span3">
+    {% include sidebar %}
+  </div>
+</div>
+
+{% comment %}
+vim:ft=liquid
+{% endcomment %}

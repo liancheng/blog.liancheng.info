@@ -1,0 +1,64 @@
+<div class="sidebar-nav">
+  <ul class="nav nav-list">
+    <li>
+      {% include site_search %}
+    </li>
+
+    <li class="nav-header">
+      <i class="icon-user"></i> Contact
+    </li>
+    <li>
+      <a href="/about.html">About me</a>
+    </li>
+
+    <li class="nav-header">
+      <i class="icon-folder-open"></i>
+      Categories
+    </li>
+    {% for cat in site.categories %}
+      <li>
+        <a href="/categories.html#category_{{ cat[0] }}">{{ cat[0] }} ({{ cat[1].size }})</a>
+      </li>
+    {% endfor %}
+
+    <li class="nav-header">
+      <i class="icon-tags"></i>
+      Categories
+    </li>
+    {% for tag in site.tags %}
+      <li>
+        <a href="/tags.html#tag_{{ tag[0] }}">{{ tag[0] }} ({{ tag[1].size }})</a>
+      </li>
+    {% endfor %}
+
+    <li class="nav-header">
+      <i class="icon-inbox"></i>
+      Archives
+    </li>
+    {% assign date = '' %}
+    {% assign count = 0 %}
+
+    {% for post in site.posts %}
+      {% capture posted_at %}{{ post.date | date: '%b %Y' }}{% endcapture %}
+      {% if date == '' %}
+        {% assign date = posted_at %}
+      {% endif %}
+
+      {% if date != posted_at %}
+        <li><a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">{{ posted_at }} ({{ count }})</a></li>
+        {% assign date = posted_at %}
+        {% assign count = 1 %}
+      {% else %}
+        {% capture count %}{{ count | plus:'1' }}{% endcapture %}
+      {% endif %}
+
+      {% if forloop.last %}
+        <li><a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">{{ posted_at }} ({{ count }})</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+{% comment %}
+vim:ft=liquid
+{% endcomment %}

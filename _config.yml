@@ -1,2 +1,5 @@
-paginate: 10
+author: 连城 (Lian Cheng)
 pygments: Yes
+url: http://liancheng.github.com
+paginate: 10
+base: '/'

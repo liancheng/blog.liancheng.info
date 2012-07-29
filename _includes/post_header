@@ -1,0 +1,28 @@
+<h1><a href="{{ the_post.url }}">{{ the_post.title }}</a></h1>
+<div class="post-info">
+  <span>
+    <i class="icon-calendar"></i>
+    <a href="/archives.html#archive_{{ the_post.date | date: '%Y_%m' }}">{{ the_post.date | date: "%B %e, %Y" }}</a>
+  </span>
+  <span>
+    {% if the_post.categories %}
+      <i class="icon-folder-open"></i>
+      {% for cat in the_post.categories %}
+        <a href="/categories.html#category_{{ cat }}">{{ cat }}</a>
+        {% if forloop.last == false %}/{% endif %}
+      {% endfor %}
+    {% endif %}
+  </span>
+  <span>
+    <i class="icon-tags"></i>
+    {% for tag in the_post.tags %}
+      <a href="{{ site.base }}tags.html#tag_{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </span>
+</div>
+
+{% assign the_post = nil %}
+
+{% comment %}
+vim:ft=liquid
+{% endcomment %}

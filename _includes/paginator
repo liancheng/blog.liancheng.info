@@ -1,0 +1,25 @@
+<ul class="pager">
+  {% if paginator.previous_page %}
+    <li class="previous">
+      {% if paginator.previous_page == 1 %}
+        <a href="/">&laquo; Newer</i></a>
+      {% else %}
+        <a href="/page{{ paginator.previous_page }}">&laquo; Newer</i></a>
+      {% endif %}
+    </li>
+  {% else %}
+    <li class="previous"><span class="disabled"><a>&laquo; Newer</i></a></span></li>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <li class="next">
+      <a href="/page{{ paginator.next_page }}">Older &raquo;</a>
+    </li>
+  {% else %}
+    <li class="next"><span class="disabled"><a>Older &raquo;</a></span></li>
+  {% endif %}
+</ul>
+
+{% comment %}
+vim:ft=liquid
+{% endcomment %}
