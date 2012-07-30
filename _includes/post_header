@@ -16,7 +16,7 @@
   <span class="post-tags">
     <i class="icon-tags"></i>
     {% for tag in the_post.tags %}
-      <a href="{{ site.base }}tags.html#tag_{{ tag }}">{{ tag }}</a>
+      <a href="/tags.html#tag_{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </span>
 </p>

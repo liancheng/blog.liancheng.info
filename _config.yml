@@ -1,5 +1,8 @@
 author: 连城 (Lian Cheng)
+email: rhythm.mail@gmail.com
+title: ":wq ~/notes"
 pygments: Yes
-url: http://liancheng.github.com
+url: http://liancheng.github.com/
 paginate: 10
-base:
+base: "/"
+description:
