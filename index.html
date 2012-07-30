@@ -4,9 +4,6 @@ title: Home
 ---
 
 <div class="row-fluid">
-  <div class="span3">
-    {% include sidebar %}
-  </div>
   <div class="span9">
     {% for post in paginator.posts %}
       <div class="post">
@@ -16,6 +13,9 @@ title: Home
       </div>
     {% endfor %}
     {% include paginator %}
+  </div>
+  <div class="span3">
+    {% include sidebar %}
   </div>
 </div>
 
