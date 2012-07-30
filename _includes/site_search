@@ -1,9 +1,7 @@
 <div class="controls">
   <form action="http://www.google.com/search" class="form-search" method="get">
     <input type="hidden" value="{{ site.url }}" name="sitesearch" />
-    <div class="input-append">
-      <input type="text" class="input-medium search-query" name="as_q" placeholder="search" /><button class="btn" type="submit"><i class="icon-search"></i></button>
-    </div>
+    <input type="text" class="input-medium search-query" name="as_q" placeholder="Search" />
   </form>
 </div>
 

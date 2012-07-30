@@ -1,10 +1,9 @@
 <div class="row-fluid">
   <div class="span12 page-footer">
-    Authored by {{ site.author }}, Powered by
-    <a href="https://github.com/mojombo/jekyll/">Jekyll</a>,
-    <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+    Built by {{ site.author }}<br />
+    Powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a>, <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
     &amp;
-    <a href="http://glyphicons.com/">Glyphicons</a>
+    <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>
   </div>
 </div>
 

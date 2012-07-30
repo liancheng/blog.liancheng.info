@@ -4,35 +4,44 @@
       {% include site_search %}
     </li>
 
-    <li class="nav-header">
-      <i class="icon-user"></i> Contact
+    <li class="nav-header">Contact Me</li>
+    <li>
+      <a href="{{ site.base }}/about.html"><i class="icon-user"></i> About me</a>
     </li>
     <li>
-      <a href="/about.html">About me</a>
+      <a href="mailto:rhythm.mail@gmail.com"><i class="icon-envelope"></i> E-mail</i></a>
+    </li>
+    <li>
+      <a href="http://github.com/liancheng/"><i class="icon-github"></i> GitHub</a>
+    </li>
+    <li>
+      <a href="http://twitter.com/liancheng/"><i class="icon-twitter"></i> Twitter</a>
+    </li>
+
+    <li class="nav-header">Subscribe</li>
+    <li>
+      <a href="{{ site.base }}/rss.xml"><i class="icon-rss"></i> RSS</a>
     </li>
 
     <li class="nav-header">
-      <i class="icon-folder-open"></i>
       Categories
     </li>
     {% for cat in site.categories %}
       <li>
-        <a href="/categories.html#category_{{ cat[0] }}">{{ cat[0] }} ({{ cat[1].size }})</a>
+        <a href="{{ site.base }}/categories.html#category_{{ cat[0] }}"><i class="icon-folder-close"></i> {{ cat[0] }} ({{ cat[1].size }})</a>
       </li>
     {% endfor %}
 
     <li class="nav-header">
-      <i class="icon-tags"></i>
-      Categories
+      Tags
     </li>
     {% for tag in site.tags %}
       <li>
-        <a href="/tags.html#tag_{{ tag[0] }}">{{ tag[0] }} ({{ tag[1].size }})</a>
+        <a href="{{ site.base }}/tags.html#tag_{{ tag[0] }}"><i class="icon-tag"></i>{{ tag[0] }} ({{ tag[1].size }})</a>
       </li>
     {% endfor %}
 
     <li class="nav-header">
-      <i class="icon-inbox"></i>
       Archives
     </li>
     {% assign date = '' %}
@@ -45,7 +54,7 @@
       {% endif %}
 
       {% if date != posted_at %}
-        <li><a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">{{ posted_at }} ({{ count }})</a></li>
+        <li><a href="{{ site.base }}/archives.html#archive_{{ post.date | date: '%Y_%m' }}"><i class="icon-inbox"></i>{{ posted_at }} ({{ count }})</a></li>
         {% assign date = posted_at %}
         {% assign count = 1 %}
       {% else %}
@@ -53,7 +62,7 @@
       {% endif %}
 
       {% if forloop.last %}
-        <li><a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">{{ posted_at }} ({{ count }})</a></li>
+        <li><a href="{{ site.base }}/archives.html#archive_{{ post.date | date: '%Y_%m' }}"><i class="icon-inbox"></i>{{ posted_at }} ({{ count }})</a></li>
       {% endif %}
     {% endfor %}
   </ul>

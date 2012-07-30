@@ -1,17 +1,19 @@
 ---
 layout: default
+comments: true
 ---
 
 <div class="row-fluid">
+  <div class="span3">
+    {% include sidebar %}
+  </div>
   <div class="span9">
     <div class="post">
       {% assign the_post = page %}
       {% include post_header %}
       {{ content }}
+      {% include disqus %}
     </div>
-  </div>
-  <div class="span3">
-    {% include sidebar %}
   </div>
 </div>
 

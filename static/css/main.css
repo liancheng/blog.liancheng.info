@@ -1,5 +1,5 @@
 blockquote {
-  background: url("/static/images/blockquote.gif") no-repeat scroll 0px 5px transparent;
+  background: url("../img/blockquote.gif") no-repeat scroll 0px 5px transparent;
   color: rgb(116, 116, 116);
   padding-left: 35px;
   border: inherit;
@@ -14,17 +14,7 @@ code {
   padding: inherit;
   color: inherit;
   background-color: inherit;
-  border-width: inherit;
-  border-style: inherit;
-}
-
-[class^="icon-"],
-[class*=" icon-"] {
-  background-image: url("/static/images/glyphicons-halflings.png");
-}
-
-.icon-white {
-  background-image: url("/static/images/glyphicons-halflings-white.png");
+  border: none;
 }
 
 .page-header h1 {
@@ -39,7 +29,7 @@ code {
 }
 
 .post-info {
-  line-height: 4
+  margin: 10px 0 20px; 0;
 }
 
 .search-query[placeholder] {
@@ -48,4 +38,8 @@ code {
 
 div.post {
   margin-bottom: 30px;
+}
+
+dd>ul.unstyled {
+  margin: 0;
 }
