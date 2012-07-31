@@ -3,6 +3,15 @@ layout: default
 title: Tags
 ---
 
+{% for tag in site.tags %}
+  <h2 id="tag_{{ tag[0] }}">{{ tag[0] }}</h2>
+  <ul>
+    {% for post in tag[1] %}
+      <li>{{ post.date | date: "%B %e, %Y" }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
 {% comment %}
-vim:ft=liquid
+vim:ft=liquid ts=2 sw=2 sts=2 et
 {% endcomment %}
