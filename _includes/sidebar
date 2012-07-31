@@ -2,15 +2,15 @@
   <ul class="nav nav-list">
     <li>{% include site_search %}</li>
 
-    <li class="nav-header">Contact Me</li>
-    <li><a href="/about.html"><i class="icon-user"></i> About me</a></li>
-    <li><a href="mailto:rhythm.mail@gmail.com"><i class="icon-envelope"></i> E-mail</i></a></li>
-    <li><a href="http://github.com/liancheng/"><i class="icon-github"></i> GitHub</a></li>
-    <li><a href="http://twitter.com/liancheng/"><i class="icon-twitter"></i> Twitter</a></li>
-
     <li class="nav-header">Subscribe</li>
     <li><a href="/atom.xml"><i class="icon-rss"></i> Atom</a></li>
     <li><a href="/rss.xml"><i class="icon-rss"></i> RSS</a></li>
+
+    <li class="nav-header">Contact Me</li>
+    <li><a href="/about.html"><i class="icon-user"></i> About me</a></li>
+    <li><a href="mailto:{{ site.author.email }}"><i class="icon-envelope-alt"></i> E-mail</i></a></li>
+    <li><a href="http://github.com/{{ site.author.github }}"><i class="icon-github"></i> GitHub</a></li>
+    <li><a href="http://twitter.com/{{ site.author.twitter }}"><i class="icon-twitter"></i> Twitter</a></li>
 
     <li class="nav-header">Categories</li>
     {% for cat in site.categories %}

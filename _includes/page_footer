@@ -1,6 +1,6 @@
 <div class="row-fluid">
   <div class="span12 page-footer">
-    Built by {{ site.author }}<br />
+    Built by {{ site.author.name }}<br />
     Powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a>, <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
     &amp;
     <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>

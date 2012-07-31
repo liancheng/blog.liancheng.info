@@ -5,7 +5,7 @@ title: "About Me"
 
 <dl class="dl-horizontal">
   <dt>Name</dt>
-  <dd>{{ site.author }}</dd>
+  <dd>{{ site.author.name }}</dd>
 
   <dt>Born</dt>
   <dd>1984, China</dd>
@@ -14,16 +14,16 @@ title: "About Me"
   <dd>
     <ul class="unstyled">
       <li>
-        <i class="icon-envelope"></i>
-        <a href="mailto:rhythm.mail@gmail.com">rhythm.mail@gmail.com</a>,
+        <i class="icon-envelope-alt"></i>
+        <a href="mailto:{{ site.author.email }}">site.author.email</a>,
       </li>
       <li>
         <i class="icon-github"></i>
-        <a href="http://github.com/liancheng">liancheng</a>,
+        <a href="http://github.com/{{ site.author.github }}">{{ site.author.github }}</a>,
       </li>
       <li>
         <i class="icon-twitter"></i>
-        <a href="http://twitter.com/liancheng">@liancheng</a>
+        <a href="http://twitter.com/{{ site.author.twitter }}">@{{ site.author.github }}</a>
       </li>
     </ul>
   </dd>

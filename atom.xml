@@ -10,8 +10,8 @@ layout: nil
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}</id>
   <author>
-    <name>{{ site.author }}</name>
-    <email>rhythm.mail@gmail.com</email>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
   </author>
 
   {% for post in site.posts %}
@@ -22,7 +22,7 @@ layout: nil
     <published>{{ post.date | date_to_xmlschema }}</published>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
-      <name>{{ site.author }}</name>
+      <name>{{ site.author.name }}</name>
       <uri>{{ site.url }}</uri>
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
