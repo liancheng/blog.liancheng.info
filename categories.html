@@ -5,11 +5,12 @@ title: Categories
 
 {% for cat in site.categories %}
   <h2 id="category_{{ cat[0] }}">{{ cat[0] }}</h2>
-  <ul>
+  <dl class="dl-horizontal">
     {% for post in cat[1] %}
-      <li>{{ post.date | date: "%B %e, %Y" }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <dt>{{ post.date | date: "%B %e, %Y" }}</dt>
+      <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
     {% endfor %}
-  </ul>
+  </dl>
 {% endfor %}
 
 {% comment %}

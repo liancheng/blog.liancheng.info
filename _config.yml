@@ -10,8 +10,8 @@ author:
     twitter: liancheng
     github: liancheng
 
-server: false
-auto: false
 pygments: true
 paginate: 10
 exclude:
+markdown: rdiscount
+image_dir: /static/img/

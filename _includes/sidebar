@@ -3,8 +3,8 @@
     <li>{% include site_search %}</li>
 
     <li class="nav-header">Subscribe</li>
-    <li><a href="/atom.xml"><i class="icon-rss"></i> Atom</a></li>
     <li><a href="/rss.xml"><i class="icon-rss"></i> RSS</a></li>
+    <li><a href="/atom.xml"><i class="icon-rss"></i> Atom</a></li>
 
     <li class="nav-header">Contact Me</li>
     <li><a href="/about.html"><i class="icon-user"></i> About me</a></li>
@@ -23,25 +23,30 @@
     {% endfor %}
 
     <li class="nav-header">Archives</li>
-    {% assign date = '' %}
+    {% assign date = nil %}
     {% assign count = 0 %}
-
     {% for post in site.posts %}
       {% capture posted_at %}{{ post.date | date: '%b %Y' }}{% endcapture %}
-      {% if date == '' %}
+      {% if date == nil %}
         {% assign date = posted_at %}
       {% endif %}
-
       {% if date != posted_at %}
-        <li><a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}"><i class="icon-inbox"></i>{{ posted_at }} ({{ count }})</a></li>
+        <li>
+          <a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">
+            <i class="icon-inbox"></i>{{ date }} ({{ count }})
+          </a>
+        </li>
         {% assign date = posted_at %}
         {% assign count = 1 %}
       {% else %}
-        {% capture count %}{{ count | plus:'1' }}{% endcapture %}
+        {% capture count %}{{ count | plus: 1 }}{% endcapture %}
       {% endif %}
-
       {% if forloop.last %}
-        <li><a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}"><i class="icon-inbox"></i>{{ posted_at }} ({{ count }})</a></li>
+        <li>
+          <a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">
+            <i class="icon-inbox"></i>{{ date }} ({{ count }})
+          </a>
+        </li>
       {% endif %}
     {% endfor %}
   </ul>

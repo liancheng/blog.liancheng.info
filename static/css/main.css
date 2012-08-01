@@ -43,3 +43,15 @@ div.post {
 dd>ul.unstyled {
   margin: 0;
 }
+
+img.align-right {
+  align: right;
+}
+
+img.align-left {
+  align: left;
+}
+
+.comments {
+  margin-top: 60px;
+}

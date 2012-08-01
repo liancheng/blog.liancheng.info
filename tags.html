@@ -5,11 +5,12 @@ title: Tags
 
 {% for tag in site.tags %}
   <h2 id="tag_{{ tag[0] }}">{{ tag[0] }}</h2>
-  <ul>
+  <dl class="dl-horizontal">
     {% for post in tag[1] %}
-      <li>{{ post.date | date: "%B %e, %Y" }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <dt>{{ post.date | date: "%B %e, %Y" }}</dt>
+      <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
     {% endfor %}
-  </ul>
+  </dl>
 {% endfor %}
 
 {% comment %}
