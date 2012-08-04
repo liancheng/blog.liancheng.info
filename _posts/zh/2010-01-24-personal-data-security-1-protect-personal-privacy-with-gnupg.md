@@ -147,19 +147,19 @@ GnuPG软件本身虽然是跨平台的，但它只提供了一套命令行工具
 
     从[此处][10]下载。GnuPG Shell是GnuPG的一个图形前端，可以较为方便地完成证书管理的工作。GnuPG Shell当然也可以用于文件的加密、解密和签名操作，但是其使用不如GPGee那样来得简单直接。
 
-    <center><p><img src="{{ site.image_dir }}2010-01-24-gnupg-shell.bmp" /></p></center>
+    <center><p><img src="{{ site.attachment_dir }}2010-01-24-gnupg-shell.bmp" /></p></center>
 
 *   GPGee
 
     从[此处][11]下载。GPGee全称为GPG explorer extension。它在Windows Explorer的右键菜单中增加了GPG相关的菜单项，使得用户可以非常方便地执行加密、解密和签名操作。但GPGee不提供GnuPG证书的管理功能，因此建议和GnuPG Shell配合使用。
 
-    <center><p><img src="{{ site.image_dir }}2010-01-24-gpgee-menu.png" /></p></center>
+    <center><p><img src="{{ site.attachment_dir }}2010-01-24-gpgee-menu.png" /></p></center>
 
     菜单项“Sign &amp; Encrypt”和“Sign”的含义不言自明。菜单项“Encrypt (PK)”中的PK是Public Key（公钥）的缩写，选择该菜单项可对文件进行非对称加密（公钥加密）。相应的，“Encrypt (Symmetric)”用于对文件进行对称加密，类似于使用RAR或Zip制作加密压缩包。
 
 如果先安装GnuPG再安装GnuPG Shell，则后者会自动检测出GnuPG的安装路径，无须另外的配置。GPGee则需要手工配置GnuPG相关路径。
 
-<center><p><img src="{{ site.image_dir }}2010-01-24-gpgee-config.png" /></p></center>
+<center><p><img src="{{ site.attachment_dir }}2010-01-24-gpgee-config.png" /></p></center>
 
 在GPGee菜单项中选择“Configure”进入GPGee配置对话框，有三个文件的路径需要配置，包括：
 
@@ -198,7 +198,7 @@ GnuPG软件本身虽然是跨平台的，但它只提供了一套命令行工具
 
 Ubuntu用户很幸运，Seahorse作为一个通用的密码/密钥管理器，对GnuPG提供了良好的支持，同时也支持密钥服务器。更棒的是，Seahorse还提供了若干GNOME插件，实现了类似GPGee的右键菜单功能，算是非常整齐划一的解决方案  `:-D`
 
-<center><p><img src="{{ site.image_dir }}2010-01-24-seahorse.png" /></p></center>
+<center><p><img src="{{ site.attachment_dir }}2010-01-24-seahorse.png" /></p></center>
 
 安装过程非常简单：
 

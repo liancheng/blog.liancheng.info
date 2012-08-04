@@ -1,5 +1,6 @@
 pygments: true
-title: ":wq ~/notes"
+title: ':wq ~/notes'
+tagline: 'Good memory as slow HDD'
 description:
 url: http://liancheng.github.com/
 permalink: /:title
@@ -14,4 +15,4 @@ pygments: true
 paginate: 10
 exclude:
 markdown: rdiscount
-image_dir: /static/img/
+attachment_dir: /attachment/
