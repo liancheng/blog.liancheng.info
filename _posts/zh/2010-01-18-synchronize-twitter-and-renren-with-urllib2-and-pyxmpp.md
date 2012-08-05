@@ -19,6 +19,8 @@ tags: python renren twitter xiaonei xmpp
 *   用[urllib2][7]登录Twitter发推
 *   [PyXMPP][8]登录校内发送`<presence/>`消息更新状态
 
+<!-- start -->
+
 估摸着复杂度不高，于是放言[应该可以在50行以内搞定][9]，心想最多一个晚上也就差不多了。然而事实证明我过于乐观了。仅仅是在Twitter上，我这个可耻的HTTP盲就撞了两次南墙：
 
 *   居然忘了自己身在墙内——只好把脚本拷到DH服务器上在墙外测试Twitter部分。这意味着要想让该脚本步入实用阶段，至少要支持Twitter API自定义，而此前我对Twitter API一无所知。
@@ -184,6 +186,8 @@ tags: python renren twitter xiaonei xmpp
 另外，校内的XMPP服务器不支持域间互通，因此你也就没法在你的Gtalk等其他XMPP帐号上添加自己的校内帐号为好友，反之亦然。
 
 再有一点，就是Pidgin等客户端在默认设置下总会在客户端持续空闲一段时间后自动切入“离开”状态。而XMPP在线状态的改变会导致校内状态的改变。所以当你用Pidgin登录校内一段时间后会发现自己的校内状态列表里多出若干条“我现在不在”，可不要觉得奇怪 `:-D`
+
+<!-- end -->
 
 [1]: http://twitter.com/Jun_Yu/
 [2]: http://twitter.com/Jun_Yu/status/7553900526
