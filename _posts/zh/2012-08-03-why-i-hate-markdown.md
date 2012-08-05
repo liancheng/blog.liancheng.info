@@ -9,11 +9,11 @@ TL;DR
 
 最近把blog从WordPress迁移到了Jekyll。方便起见，目前暂时托管在GitHub上。Jekyll内置了多种标记语言支持，可惜其中并不包含我最喜爱的[reStructuredText][2]（以下简称为reST）。虽然也有[现成的Jekyll reST插件][3]，但GitHub出于安全考虑禁用了Jekyll插件。在Jekyll内置支持的若干标记语言中比较了一番之后，决定开始用[Markdown][7]写文章。然而很快便发现，Markdown实在是让人爱不起来。这篇就来批一批Markdown。作为对比，我还会写一写同样的问题在reST中是怎么解决的。
 
-简单来说，用reST的时候给人的感觉像是用咖啡机磨了杯Espresso，爱加奶加奶，爱加糖加糖；用Markdown的时候则像是要了碗豆汁儿：爱喝喝不喝滚……
-
 **注意**：我从来没有说Markdown是最烂的标记语言，比Markdown更烂的标记语言还有的是。但Markdown自身的确有一些严重的缺陷，尤其是在中文文档书写方面，无论是文档的结构语义表达还是样式套用，都令我非常不满意。
 
 在我看来，Markdown的应用范围应当限制在千字以内、仅包含少量格式、无复杂结构的文档撰写，典型应用如类Doxygen的代码文档注释和blog评论等。除此之外，科技文档撰写、书籍撰写等场景下，Markdown都不是什么好的选择。并且，在这些应用中应当尽可能只使用Markdown的标准格式。Markdown的各种实现版本还各自新增了各式各样的语法扩展，这些扩展虽然便利，但却大大折损了Markdown文档及相关工具的互操作性。
+
+<!-- start -->
 
 ## Keep it simple stupid, but not too simple, please
 
@@ -220,6 +220,8 @@ img.shading {
 
         Markdown中**粗体嵌套*斜体*也没问题**
 
+<!-- end -->
+
 [1]: http://en.wikipedia.org/wiki/Open/closed_principle
 [2]: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 [3]: https://github.com/xdissent/jekyll-rst
@@ -233,3 +235,7 @@ img.shading {
 [11]: {{ site.attachment_dir }}2012-08-03-re-st.html
 [12]: http://docutils.sourceforge.net/docs/ref/rst/roles.html
 [13]: http://www.ituring.com.cn/book/828
+
+{% comment %}}
+vim:ft=markdown.liquid
+{% endcomment %}

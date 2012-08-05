@@ -9,7 +9,7 @@ title: Home
       <div class="post">
         {% assign the_post = post %}
         {% include post_header %}
-        {{ post.content }}
+        {{ post.content | replace: 'start -->', '' | replace: '<!-- end', '' }}
       </div>
     {% endfor %}
     {% include paginator %}
