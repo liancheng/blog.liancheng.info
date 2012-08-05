@@ -28,28 +28,30 @@ tags: python renren twitter xiaonei xmpp
 
 最终实现的Twitter部分的功能：采用最简单的Basic Authentication登录，然后调用API [`statuses/update`][11]发推。代码直截了当：
 
-    #!/usr/bin/python
+{% highlight python %}
+#!/usr/bin/python
 
-    import urllib2
-    from sys import argv
+import urllib2
+from sys import argv
 
-    TWITTER_API_STATUSES_UPDATE = 'http://twitter.com/statuses/update.xml'
-    TWITTER_BASIC_AUTH_REALM = 'Twitter API'
+TWITTER_API_STATUSES_UPDATE = 'http://twitter.com/statuses/update.xml'
+TWITTER_BASIC_AUTH_REALM = 'Twitter API'
 
-    def update(user, password, message):
-        auth_handler = urllib2.HTTPBasicAuthHandler()
-        auth_handler.add_password(realm=TWITTER_BASIC_AUTH_REALM,
-                                  uri=TWITTER_API_STATUSES_UPDATE,
-                                  user=user,
-                                  passwd=password)
+def update(user, password, message):
+    auth_handler = urllib2.HTTPBasicAuthHandler()
+    auth_handler.add_password(realm=TWITTER_BASIC_AUTH_REALM,
+                              uri=TWITTER_API_STATUSES_UPDATE,
+                              user=user,
+                              passwd=password)
 
-        opener = urllib2.build_opener(auth_handler)
-        urllib2.install_opener(opener)
-        urllib2.urlopen(TWITTER_API_STATUSES_UPDATE, 'status=' + message)
+    opener = urllib2.build_opener(auth_handler)
+    urllib2.install_opener(opener)
+    urllib2.urlopen(TWITTER_API_STATUSES_UPDATE, 'status=' + message)
 
-    if __name__ == '__main__':
-        user, password, message = argv[1], argv[2], argv[3]
-        update(user, password, message)
+if __name__ == '__main__':
+    user, password, message = argv[1], argv[2], argv[3]
+    update(user, password, message)
+{% endhighlight %}
 
 功能算是实现了，不过不支持Twitter API，致使在墙内实用性全无。另外最好能支持[OAuth][12]。然而在打算进一步增加功能时，想起应该先看看有没有现成的，于是发现Twitter官方果然列出了[若干个Python Twitter API库][13]。考虑到继续做下去最多也就是再捣腾出另一个类似的东西，顿时兴趣索然。于是决定就这么将就着用了，真有高级功能需求的话，直接用现成的库来实现好了。至此，Twitter部分算是告一段落。
 
@@ -59,7 +61,9 @@ tags: python renren twitter xiaonei xmpp
 
 拿到裸JID后，第一步就是借助PyXMPP来登录校内XMPP帐号。头一回用PyXMPP，翻文档，接口如云。心想，对于登录这样的常见任务，应该有简化接口吧。果然让我找到了[`pyxmpp.jabber.simple.xmpp_do`][14]：
 
-    xmpp_do(jid, password, function, server=None, port=None)
+{% highlight python %}
+xmpp_do(jid, password, function, server=None, port=None)
+{% endhighlight %}
 
 其文档描述为：
 
@@ -67,10 +71,12 @@ tags: python renren twitter xiaonei xmpp
 
 这就好办了，顺手写下一段测试代码（登录指定帐号后打印“hello”）：
 
-    def foo(stream):
-        print 'hello'
+{% highlight python %}
+def foo(stream):
+    print 'hello'
 
-    xmpp_do(JID('123546@talk.renren.com/python', 'secret', foo))
+xmpp_do(JID('123546@talk.renren.com/python', 'secret', foo))
+{% endhighlight %}
 
 执行、登录失败、挠头、看文档、阅读源码、复习RFC 3920、日志调试……这个问题足足block了我好几个钟头——不过80%的时间花费是由于调试受挫转而去看了大半季的TBBT `;-)` 言归正传，最终我发现上面这短短三行代码其实包含了两个错误：
 
@@ -80,12 +86,12 @@ tags: python renren twitter xiaonei xmpp
 
     在[这篇文章][17]的帮助下，从[`pyxmpp.jabber.client.JabberClient`][18]派生了自定义的XMPP客户端类，增加了TLS设置和SASL认证设置，问题解决：
 
-        class R2Client( JabberClient ):
-            def __init__( self, jid, password ):
-                tls = streamtls.TLSSettings( require=True, verify_peer=False )
+        class R2Client(JabberClient):
+            def __init__(self, jid, password):
+                tls = streamtls.TLSSettings(require=True, verify_peer=False)
                 auth = ['sasl:PLAIN']
-                JabberClient.__init__( self, jid, password, tls_settings=tls,
-                                       auth_methods=auth )
+                JabberClient.__init__(self, jid, password, tls_settings=tls,
+                                      auth_methods=auth)
 
 *   XMPP域
 
@@ -115,62 +121,70 @@ tags: python renren twitter xiaonei xmpp
 
 完成登录后，更新校内状态就比较简单了，只需要发送一条`<presence/>`消息即可。发送成功后断开连接，脚本执行结束。相关代码如下：
 
-    class R2Client(JabberClient):
-        ...
-        def session_started(self):
-            self.stream.send(Presence(status=message))
-            self.stream.disconnect()
+{% highlight python %}
+class R2Client(JabberClient):
+    ...
+    def session_started(self):
+        self.stream.send(Presence(status=message))
+        self.stream.disconnect()
+{% endhighlight %}
 
 最后是XMPP客户端的主循环：
 
-    client = R2Client(JID( user + '@talk.xiaonei.com/r2'), password)
-    client.connect()
-    client.loop(1)
+{% highlight python %}
+client = R2Client(JID( user + '@talk.xiaonei.com/r2'), password)
+client.connect()
+client.loop(1)
+{% endhighlight %}
 
 上述代码中的R2代表RenRen `:-)` 本以为到此就结束了，不想最后又被PyXMPP绊了一跤：`R2Client.session_started`最后的`disconnect()`调用无法结束主循环。无奈之下再翻源码，在[`pyxmpp.client.Client.loop`][20]中看到：
 
-    while 1:
-        stream = self.get_stream()
-        if not stream:
-            break
-        ...
+{% highlight python %}
+while 1:
+    stream = self.get_stream()
+    if not stream:
+        break
+    ...
+{% endhighlight %}
 
 也就是说，只要`stream`对象不为`None`，无论其连接状态如何，`Client.loop`都不会从这个`while`中返回。这得算是个bug了，挠头……最后hack了一下，在`disconnect()`之后将`self.stream`设为`None`，终于大功告成。更新校内状态的完整代码如下：
 
-    #!/usr/bin/python
+{% highlight python %}
+#!/usr/bin/python
 
-    import logging
+import logging
 
-    from pyxmpp import streamtls
-    from pyxmpp.jabber.client import JabberClient
-    from pyxmpp.jid import JID
-    from pyxmpp.presence import Presence
-    from sys import argv
+from pyxmpp import streamtls
+from pyxmpp.jabber.client import JabberClient
+from pyxmpp.jid import JID
+from pyxmpp.presence import Presence
+from sys import argv
 
-    def UpdateR2( user, password, message ):
-        class R2Client( JabberClient ):
-            def __init__( self, jid, password ):
-                tls = streamtls.TLSSettings( require=True, verify_peer=False )
-                auth = ['sasl:PLAIN']
-                JabberClient.__init__( self, jid, password, tls_settings=tls,
-                                       auth_methods=auth )
+def UpdateR2(user, password, message):
+    class R2Client(JabberClient):
+        def __init__(self, jid, password):
+            tls = streamtls.TLSSettings(require=True, verify_peer=False)
+            auth = ['sasl:PLAIN']
+            JabberClient.__init__(self, jid, password, tls_settings=tls,
+                                  auth_methods=auth)
 
-            def session_started( self ):
-                self.stream.send( Presence( status=message ) )
-                self.stream.disconnect()
-                self.stream = None
+        def session_started(self):
+            self.stream.send(Presence(status=message))
+            self.stream.disconnect()
+            self.stream = None
 
-        client = R2Client( JID( user + '@talk.xiaonei.com/r2' ), password )
-        client.connect()
-        client.loop( 1 )
+    client = R2Client(JID(user + '@talk.xiaonei.com/r2'), password)
+    client.connect()
+    client.loop(1)
 
-    if __name__ == '__main__':
-        logger = logging.getLogger()
-        logger.addHandler( logging.StreamHandler() )
-        logger.setLevel( logging.DEBUG )
+if __name__ == '__main__':
+    logger = logging.getLogger()
+    logger.addHandler(logging.StreamHandler())
+    logger.setLevel(logging.DEBUG)
 
-        user, password, message = argv[ 1 ], argv[ 2 ], argv[ 3 ]
-        UpdateR2( user, password, '[r2] ' + message )
+    user, password, message = argv[1], argv[2], argv[3]
+    UpdateR2(user, password, '[r2] ' + message)
+{% endhighlight %}
 
 将这个脚本和前面的Twitter脚本简单整合一下，便可实现Twitter/校内状态的同步更新了。如文章开头所说，其实我自己对这个同步功能并没有什么需求，纯粹是做着玩。把过程写出来，也许对其他人会有些用处吧  `;-)` 起先吹牛说50行以内搞定，最后还是超了，而且还只能算是个原型。要在墙内达到实用水准，至少还要支持Twitter API，最好还能支持OAuth。
 

@@ -13,6 +13,8 @@ TL;DR
 
 在我看来，Markdown的应用范围应当限制在千字以内、仅包含少量格式、无复杂结构的文档撰写，典型应用如类Doxygen的代码文档注释和blog评论等。除此之外，科技文档撰写、书籍撰写等场景下，Markdown都不是什么好的选择。并且，在这些应用中应当尽可能只使用Markdown的标准格式。Markdown的各种实现版本还各自新增了各式各样的语法扩展，这些扩展虽然便利，但却大大折损了Markdown文档及相关工具的互操作性。
 
+<small>后记：这里所说的互操作，主要指用不同的Markdown实现转换同一份Markdown文档。Jekyll支持自定义Markdown实现，然而一旦用了某种实现的特定扩展，今后想换一个Markdown实现的时候就郁闷了（例如原先用的是Maruku，并且用了它的meta syntax，后来因为性能原因换了rdiscount）。相较之下reST只有一份主流标准实现。</small>
+
 <!-- start -->
 
 ## Keep it simple stupid, but not too simple, please

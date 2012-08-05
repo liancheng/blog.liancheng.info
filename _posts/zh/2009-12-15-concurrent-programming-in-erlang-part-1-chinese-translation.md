@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Concurrent Programming in Erlang Part 1 中文译稿
+title: Concurrent Programming in Erlang (Part 1) 中文译稿
 category: translation
 tags: translation cpie-cn erlang
 ---
 
 链接：[《Erlang并发编程》第一部分][cpie-cn]
 
-从去年年中开始，利用闲暇时间零零散散地翻译Concurrent Programming in Erlang Part 1。完成了[序言][preface]、[致谢][ack]、[简介][intro]和[第1章][chapter-1]之后由于工作繁忙暂停了很久。今年年初，又重新捡起来，完成了[第2章][chapter-2]。同时也将原先的reStructuredText格式的译稿迁移到Sphinx上。借助Sphinx，将译稿切分、组织成了合理的工程目录。于是将译稿上传到了SVN，又在Erlang-China和TopLanguage发了[帖子][post]，正式发起[CPiE-CN项目][project]，召集了一批志愿译者，开始合作翻译剩余章节。
+从去年年中开始，利用闲暇时间零零散散地翻译Concurrent Programming in Erlang (Part 1)。完成了[序言][preface]、[致谢][ack]、[简介][intro]和[第1章][chapter-1]之后由于工作繁忙暂停了很久。今年年初，又重新捡起来，完成了[第2章][chapter-2]。同时也将原先的reStructuredText格式的译稿迁移到Sphinx上。借助Sphinx，将译稿切分、组织成了合理的工程目录。于是将译稿上传到了SVN，又在Erlang-China和TopLanguage发了[帖子][post]，正式发起[CPiE-CN项目][project]，召集了一批志愿译者，开始合作翻译剩余章节。
 
 <!-- start -->
 
