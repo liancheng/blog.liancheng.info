@@ -1,0 +1,34 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule $^ http://liancheng.github.com/
+
+RewriteCond %{QUERY_STRING} ^p=597$
+RewriteRule ^$ http://liancheng.github.com/denial-of-service/
+
+RewriteCond %{QUERY_STRING} ^p=548$
+RewriteRule ^$ http://liancheng.github.com/distributed-system-theory-literature/
+
+RewriteCond %{QUERY_STRING} ^p=433$
+RewriteRule ^$ http://liancheng.github.com/personal-data-security-2-im-privacy-protection/
+
+RewriteCond %{QUERY_STRING} ^p=338$
+RewriteRule ^$ http://liancheng.github.com/personal-data-security-1-protect-personal-privacy-with-gnupg/
+
+RewriteCond %{QUERY_STRING} ^p=280$
+RewriteRule ^$ http://liancheng.github.com/synchronize-twitter-and-renren-with-urllib2-and-pyxmpp/
+
+RewriteCond %{QUERY_STRING} ^p=225$
+RewriteRule ^$ http://liancheng.github.com/concurrent-programming-in-erlang-part-1-chinese-translation/
+
+RewriteCond %{QUERY_STRING} ^p=221$
+RewriteRule ^$ http://liancheng.github.com/snipmate-backquote-esacaping-patch/
+
+RewriteCond %{QUERY_STRING} ^p=85$
+RewriteRule ^$ http://liancheng.github.com/four-sins-of-shared-ptr/
+
+RewriteCond %{QUERY_STRING} ^p=20$
+RewriteRule ^$ http://liancheng.github.com/wq-2008-2
+
+RewriteCond %{QUERY_STRING} ^p=1$
+RewriteRule ^$ http://liancheng.github.com/wq-2008-1
