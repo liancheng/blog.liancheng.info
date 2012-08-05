@@ -4,6 +4,10 @@ tagline: 'Good memory as slow HDD'
 description:
 url: http://liancheng.github.com/
 permalink: /:title
+exclude:
+paginate: 10
+pygments: true
+markdown: rdiscount
 
 author:
     name: 连城 (Lian Cheng)
@@ -11,8 +15,4 @@ author:
     twitter: liancheng
     github: liancheng
 
-pygments: true
-paginate: 10
-exclude:
-markdown: rdiscount
 attachment_dir: /attachment/
