@@ -80,44 +80,50 @@ xmpp_do(JID('123546@talk.renren.com/python', 'secret', foo))
 
 执行、登录失败、挠头、看文档、阅读源码、复习RFC 3920、日志调试……这个问题足足block了我好几个钟头——不过80%的时间花费是由于调试受挫转而去看了大半季的TBBT `;-)` 言归正传，最终我发现上面这短短三行代码其实包含了两个错误：
 
-*   TLS和SASL
+**TLS和SASL**
 
-    校内XMPP服务器要求使用TLS加密。虽然[RFC 3920][15]规定，XMPP客户端必须使用SASL并应该在SASL认证前使用TLS对数据流进行加密，但默认情况下[PyXMPP不启用TLS][16]，`xmpp_do`在登录时采用的是默认设置，因此无法通过协商，进而无法登录。这个问题是参考PyXMPP的echobot示例，输出了PyXMPP的调试日志后发现的。
+校内XMPP服务器要求使用TLS加密。虽然[RFC 3920][15]规定，XMPP客户端必须使用SASL并应该在SASL认证前使用TLS对数据流进行加密，但默认情况下[PyXMPP不启用TLS][16]，`xmpp_do`在登录时采用的是默认设置，因此无法通过协商，进而无法登录。这个问题是参考PyXMPP的echobot示例，输出了PyXMPP的调试日志后发现的。
 
-    在[这篇文章][17]的帮助下，从[`pyxmpp.jabber.client.JabberClient`][18]派生了自定义的XMPP客户端类，增加了TLS设置和SASL认证设置，问题解决：
+在[这篇文章][17]的帮助下，从[`pyxmpp.jabber.client.JabberClient`][18]派生了自定义的XMPP客户端类，增加了TLS设置和SASL认证设置，问题解决：
 
-        class R2Client(JabberClient):
-            def __init__(self, jid, password):
-                tls = streamtls.TLSSettings(require=True, verify_peer=False)
-                auth = ['sasl:PLAIN']
-                JabberClient.__init__(self, jid, password, tls_settings=tls,
-                                      auth_methods=auth)
+{% highlight python %}
+class R2Client(JabberClient):
+    def __init__(self, jid, password):
+        tls = streamtls.TLSSettings(require=True, verify_peer=False)
+        auth = ['sasl:PLAIN']
+        JabberClient.__init__(self, jid, password, tls_settings=tls,
+                              auth_methods=auth)
+{% endhighlight %}
 
-*   XMPP域
+**XMPP域**
 
-    修正TLS的问题后再次尝试，却得到一个莫名其妙的`pyxmpp.exceptions.HostMismatch`。该异常类的文档中没有任何说明，只好再次翻[源码][19]。结合日志，发现问题出在XMPP域上。考虑到校内已经正式更名为人人网，在上面的代码中我采用的XMPP域是`talk.renren.com`。观察调试日志，PyXMPP发起连接时向服务器发送的stream header为：
+修正TLS的问题后再次尝试，却得到一个莫名其妙的`pyxmpp.exceptions.HostMismatch`。该异常类的文档中没有任何说明，只好再次翻[源码][19]。结合日志，发现问题出在XMPP域上。考虑到校内已经正式更名为人人网，在上面的代码中我采用的XMPP域是`talk.renren.com`。观察调试日志，PyXMPP发起连接时向服务器发送的stream header为：
 
-        <?xml version="1.0" encoding="UTF-8"?>
-        <stream:stream
-          xmlns:stream="http://etherx.jabber.org/streams"
-          xmlns="jabber:client"
-          to="talk.renren.com"
-          version="1.0">
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<stream:stream
+  xmlns:stream="http://etherx.jabber.org/streams"
+  xmlns="jabber:client"
+  to="talk.renren.com"
+  version="1.0">
+{% endhighlight %}
 
-    服务器回复的stream header为：
+服务器回复的stream header为：
 
-        <?xml version='1.0'?>
-        <stream:stream
-          from='talk.xiaonei.com'
-          xmlns='jabber:client'
-          xmlns:stream='http://etherx.jabber.org/streams'
-          version='1.0'>
+{% highlight xml %}
+<?xml version='1.0'?>
+<stream:stream
+  from='talk.xiaonei.com'
+  xmlns='jabber:client'
+  xmlns:stream='http://etherx.jabber.org/streams'
+  version='1.0'>
+{% endhighlight %}
 
-    注意客户端发送的stream header的`to`为`talk.renren.com`，而服务器回复的stream header的`from`却是`talk.xiaonei.com`。而PyXMPP在这里做了一个判断，当客户端发送的stream header中的`to`和服务器的stream header中的`from`不符时，便抛出`HostMismatch`异常。
+注意客户端发送的stream header的`to`为`talk.renren.com`，而服务器回复的stream header的`from`却是`talk.xiaonei.com`。而PyXMPP在这里做了一个判断，当客户端发送的stream header中的`to`和服务器的stream header中的`from`不符时，便抛出`HostMismatch`异常。
 
-    找到了症结就好解决，把XMPP域改为`talk.xiaonei.com`即可。至此，终于登录成功。
+找到了症结就好解决，把XMPP域改为`talk.xiaonei.com`即可。至此，终于登录成功。
 
-    不过，在XMPP域的这个问题上，校内和PyXMPP的做法都欠妥。RFC 3920并未规定在stream建立过程中接收方stream header的`from`字段必须和发起方stream header的`to`字段吻合。因此PyXMPP在判断二者不相符时抛出异常导致连接断开的行为是不合适的。而校内这样做的动机，应该是为了对校内更名为人人网之前发布出去的旧版本客户端做兼容。在这个场景下，更合适的做法是由`talk.renren.com`的XMPP服务器向客户端返回一个`<see-other-host/>`错误，同时将正确的XMPP域`talk.xiaonei.com`告知客户端以进行重定向。相较之下，校内XMPP服务器的行为虽然欠妥，但并未违反RFC，倒是PyXMPP的做法有违标准。
+不过，在XMPP域的这个问题上，校内和PyXMPP的做法都欠妥。RFC 3920并未规定在stream建立过程中接收方stream header的`from`字段必须和发起方stream header的`to`字段吻合。因此PyXMPP在判断二者不相符时抛出异常导致连接断开的行为是不合适的。而校内这样做的动机，应该是为了对校内更名为人人网之前发布出去的旧版本客户端做兼容。在这个场景下，更合适的做法是由`talk.renren.com`的XMPP服务器向客户端返回一个`<see-other-host/>`错误，同时将正确的XMPP域`talk.xiaonei.com`告知客户端以进行重定向。相较之下，校内XMPP服务器的行为虽然欠妥，但并未违反RFC，倒是PyXMPP的做法有违标准。
 
 完成登录后，更新校内状态就比较简单了，只需要发送一条`<presence/>`消息即可。发送成功后断开连接，脚本执行结束。相关代码如下：
 
