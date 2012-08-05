@@ -18,6 +18,6 @@ author:
 comments:
     provider: disqus
     disqus:
-        short_name: 'wq-notes'
+        short_name: 'lian-blog'
 
 attachment_dir: /attachment/
