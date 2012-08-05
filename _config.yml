@@ -15,4 +15,9 @@ author:
     twitter: liancheng
     github: liancheng
 
+comments:
+    provider: disqus
+    disqus:
+        short_name: 'wq-notes'
+
 attachment_dir: /attachment/
