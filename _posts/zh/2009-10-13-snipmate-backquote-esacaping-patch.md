@@ -56,7 +56,7 @@ let snippet = substitute(snippet, "\\\\`", "`", 'g')
 {% highlight vim %}
 # Literal text
 snippet l
-    \`\`${1}\`\`${2}</pre>
+    \`\`${1}\`\`${2}
 {% endhighlight %}
 
 简单测试了一下，大功告成！ `:-D` 开心之余屁颠地跑到snipMate的Google Code主页上去[提交了这个patch](http://code.google.com/p/snipmate/issues/detail?id=88&amp;colspec=ID%20Type%20Status%20Priority%20OS%20Summary)。说来再次可耻，虽然一直享着OpenSource的福，却从未正式提交过补丁，以至于我都不知道应该如何正确地提交一个补丁……Google了一把倒也迅速搞定。
