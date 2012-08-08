@@ -1,3 +1,5 @@
+debug: true
+
 pygments: true
 title: ':wq ~/notes'
 tagline: 'Good memory as slow HDD'
@@ -8,6 +10,7 @@ exclude:
 paginate: 10
 pygments: true
 markdown: rdiscount
+attachment_dir: /attachment/
 
 author:
     name: 连城 (Lian Cheng)
@@ -19,5 +22,3 @@ comments:
     provider: disqus
     disqus:
         short_name: 'lian-blog'
-
-attachment_dir: /attachment/
