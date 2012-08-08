@@ -5,6 +5,8 @@ category: dev-notes
 tags: tools vim
 ---
 
+<small>后记：snipMate当前已经在官方版本中支持反引号的转义了。</small>
+
 对于一套IDE来说，一个好的snippet管理工具可以大大提高程序员的工作效率。作为一个适应不了Emacs的Vim geek，Eclipse自带的代码补全、Visual Studio的Visual Assist插件、Emacs下由[Pluskid](http://blog.pluskid.org)荣誉出品的[yasnippet](http://code.google.com/p/yasnippet/)，都让我十分垂涎。之前曾经用过很长一段时间的[snippetEmu](http://www.vim.org/scripts/script.php?script_id=1318)（这也是Debian/Ubuntu vim-scripts包中所带的snippet插件），虽然确实有助于提高效率，却有诸多不足：视觉效果很不清爽，时不时还出些问题，最难忍的便是其晦涩不堪的snippet定义方式。后来也尝试过同事推荐的另一个已经不记得名字的插件，仍旧不趁手，又换回snippetEmu。
 
 前两天无意中发现snipMate，试用之后大呼惊艳！虽然和snippetEmu同是模仿TextMate，snipMate要精致得多。Snippet的定义方式也非常灵活和人性化。只有一处让人不待见的地方，就是snippet定义必须像Makefile一样以tab开头。通读文档之后依照自己的代码风格改写了默认的C/C++ snippet文件，又录入了Emacs erlang-mode所带的几个OTP behaviour的snippet。把玩一番，爱不释手 `:-D`
