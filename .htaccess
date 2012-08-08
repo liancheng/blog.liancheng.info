@@ -30,3 +30,5 @@ RewriteRule ^$ http://liancheng.github.com/wq-2008-2/? [R=301]
 
 RewriteCond %{QUERY_STRING} ^p=1$
 RewriteRule ^$ http://liancheng.github.com/wq-2008-1/? [R=301]
+
+RewriteRule ^$ http://liancheng.github.com/
