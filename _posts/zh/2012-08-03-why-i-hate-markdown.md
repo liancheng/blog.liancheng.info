@@ -97,12 +97,12 @@ p {
 {% highlight rst %}
 .. compound::
 
-    [The description of the concept, bla bla...]
+    概念概述
 
-    *   case 1
-    *   case 2
+    *   细分情况1
+    *   细分情况2
 
-    [The summary, bla bla...]
+    概念总结
 {% endhighlight %}
 
 ReST输出的HTML如下：
