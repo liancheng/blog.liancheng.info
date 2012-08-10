@@ -1,4 +1,4 @@
-debug: true
+debug: false
 
 pygments: true
 title: ':wq ~/notes'
@@ -9,7 +9,7 @@ permalink: /:title
 exclude:
 paginate: 10
 pygments: true
-markdown: rdiscount
+markdown: kramdown
 attachment_dir: /attachment/
 
 author:
