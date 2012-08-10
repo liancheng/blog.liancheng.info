@@ -9,6 +9,7 @@
     <li class="nav-header">Contact Me</li>
     <li><a href="/about.html"><i class="icon-user"></i> About me</a></li>
     <li><a href="mailto:{{ site.author.email }}"><i class="icon-envelope-alt"></i> E-mail</i></a></li>
+    <li><a href="http://cn.linkedin.com/in/{{ site.author.linkedin }}"><i class="icon-linkedin"></i> LinkedIn</a></li>
     <li><a href="http://github.com/{{ site.author.github }}"><i class="icon-github"></i> GitHub</a></li>
     <li><a href="http://twitter.com/{{ site.author.twitter }}"><i class="icon-twitter"></i> Twitter</a></li>
 
