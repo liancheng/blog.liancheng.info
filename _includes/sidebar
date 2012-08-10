@@ -49,6 +49,9 @@
         </li>
       {% endif %}
     {% endfor %}
+
+    <li class="divider"></li>
+    <li>{% include license %}</li>
   </ul>
 </div>
 
