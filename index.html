@@ -10,7 +10,7 @@ title: Home
         {% assign the_post = post %}
         {% include post_header %}
         {{ post.content | replace: 'start -->', '' | replace: '<!-- end', '' }}
-        <p><a href="{{ post.url }}" class="btn">More &raquo;</a></p>
+        <p><a href="{{ post.url }}" class="btn">More...</a></p>
       </div>
     {% endfor %}
     {% include paginator %}
