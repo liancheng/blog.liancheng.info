@@ -1,5 +1,3 @@
-debug: false
-
 pygments: true
 title: ':wq ~/notes'
 tagline: 'Good memory as slow HDD'
@@ -7,7 +5,7 @@ description:
 url: http://liancheng.github.com/
 permalink: /:title
 exclude:
-paginate: 10
+paginate: 5
 pygments: true
 markdown: kramdown
 attachment_dir: /attachment/
