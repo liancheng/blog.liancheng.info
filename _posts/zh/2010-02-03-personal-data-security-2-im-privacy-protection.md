@@ -5,7 +5,7 @@ category: personal
 tags: data-security censorship im otr xmpp
 ---
 
-<div class="title-icon"><img src="{{ site.attachment_dir }}2010-02-03-censorship.gif" alt="Cencorship" width="260" height="162" /></div>
+<div class="title-icon"><img src="{{ site.attachment_dir }}2010-02-03-censorship.gif" alt="Cencorship" /></div>
 
 **本文部分链接可能需要翻墙访问**
 

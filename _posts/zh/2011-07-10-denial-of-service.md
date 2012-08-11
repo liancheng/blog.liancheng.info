@@ -5,7 +5,7 @@ category: work
 tags: mstc
 ---
 
-<div class="title-icon"><img src="{{ site.attachment_dir }}2011-07-10-ddos.jpg" alt="DDoS" width="300" height="194" /></div>
+<div class="title-icon"><img src="{{ site.attachment_dir }}2011-07-10-ddos.jpg" alt="DDoS" /></div>
 
 题记：本文可不是关于DoS或DDoS的技术文章 :-D 前两个月受Pluskid之托，给浙大MSTC十周年的月刊（说是月刊，实际上按发刊速度已经是年刊了）写篇文章，于是便有了这篇。原文名为《拒绝》，为了放到Blog上而找题图时才突然想到DoS这个名字。
 
