@@ -9,6 +9,9 @@ comments: true
       {% assign the_post = page %}
       {% include post_header %}
       {{ content }}
+      <div class="well">
+        {% include license %}
+      </div>
       <hr/>
       <ul class="pager">
         {% if page.previous %}

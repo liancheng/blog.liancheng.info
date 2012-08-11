@@ -5,6 +5,8 @@ category: personal
 tags: data-security censorship im otr xmpp
 ---
 
+<div class="title-icon"><img src="{{ site.attachment_dir }}2010-02-03-censorship.gif" alt="Cencorship" width="260" height="162" /></div>
+
 **本文部分链接可能需要翻墙访问**
 
 一般来说，即时通讯（IM）软件都会对客户端到服务器的通讯进行加密，对用户隐私数据安全提供一定程度的保障。但也有例外，比如MSN就完全不加密。所以一些小公司将MSN作为主要IM工具是极为不明智的，借助Wireshark等简单工具对员工间甚至员工和客户间的对话内容进行监听易如反掌，极容易造成商业机密的泄漏。微软坚持使用明文MSN协议的目的让人难以捉摸，其中恐怕难免混有政治因素。使用MSN Shell插件的加密功能或者SSH隧道转发等手段，也可以不同程度地间接加密MSN通讯数据。
@@ -108,7 +110,7 @@ Pidgin便有一个OTR插件——[Pidgin Encryption][13]，可对Pidgin支持的
 [2]: http://www.chinagfw.org/2009/09/qq_23.html
 [3]: http://xijie.wordpress.com/2009/08/26/%E3%80%90%E6%B3%A8%E6%84%8F%E3%80%91%E4%B8%AD%E6%96%87%E7%89%88google-talk%E6%98%AF%E6%9C%AA%E5%8A%A0%E5%AF%86%E6%98%8E%E6%96%87%E4%BC%A0%E8%BE%93%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9/
 [4]: http://www.google.com/support/forum/p/other/thread?tid=5ee3c6dc35225996&amp;hl=zh-CN
-[5]: http://blog.liancheng.info/?p=338
+[5]: /personal-data-security-1-protect-personal-privacy-with-gnupg/
 [6]: http://www.process-one.net/
 [7]: http://hosted.im
 [8]: http://hosted.im/portal/features
@@ -119,3 +121,7 @@ Pidgin便有一个OTR插件——[Pidgin Encryption][13]，可对Pidgin支持的
 [13]: http://pidgin-encrypt.sourceforge.net/
 [14]: http://xmpp.org/extensions/xep-0027.html
 [15]: http://blog.chavant.info/2009/06/01/gnupg-plugin-for-pidgin
+
+{% comment %}
+vim:ft=markdown.liquid wrap
+{% endcomment %}

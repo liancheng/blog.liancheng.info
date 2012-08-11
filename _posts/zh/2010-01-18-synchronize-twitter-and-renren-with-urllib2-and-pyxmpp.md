@@ -5,6 +5,8 @@ category: dev-notes
 tags: python renren twitter xiaonei xmpp
 ---
 
+<div class="title-icon"><img src="{{ site.attachment_dir }}2010-01-18-xmpp.jpg" alt="XMPP Logo" /></div>
+
 在翻墙技能还不熟练，同时Twitter上好友也还很稀少的那么一段日子里，一度拿校内状态当作Twitter使用。上周末，看到[@Jun_Yu][1]的[这么一推][2]：
 
 >   发现一件有意思的事儿 好多有意思的推被转到校内 然后又被有的推友贴上"转自校内"的标签重新在这儿疯狂rt</p></blockquote>

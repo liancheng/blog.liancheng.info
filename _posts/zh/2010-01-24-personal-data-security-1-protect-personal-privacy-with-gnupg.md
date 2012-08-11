@@ -5,6 +5,8 @@ category: personal
 tags: data-security tools gnu-pg open-pgp
 ---
 
+<div class="title-icon"><img src="{{ site.attachment_dir }}2010-01-24-gpg-sign.png" alt="GPG Sign" /></div>
+
 之前在Twitter上说过，打算写一个个人数据安全解决方案的系列，内容包括：
 
 *   基于[GnuPG][1]的个人隐私数据保护
@@ -13,15 +15,13 @@ tags: data-security tools gnu-pg open-pgp
 
 原本还打算写一写用SSH端口转发隧道建立SOCKS v5代理（俗称SSH翻墙术），鉴于网上已经有不少不错的介绍（[1][2]、[2][3]），就不再重复劳动了。这里所采用的技术全部基于开源软件、免费软件或免费服务商，同时也兼顾使用体验。除了自建XMPP服务器所需的域名费用外，其余部分的经济成本为零。
 
-<!-- start -->
-
 跟丫头暂时还维持着北京、杭州两地分居的状况，网络是平时联络和数据交换的最为重要的手段。上述的这些技术都是我们目前正在使用的数据安全保障手段。这几篇文章的前身其实就是我写给丫头的操作手册。内容并不艰深，丫头并非计算机专业也能轻松掌握就是最佳佐证 `:-D`
 
 另外，由于我平时主要使用Ubuntu，所以这里的所有方案都同时适用于Ubuntu和Windows。对Ubuntu以外的其他Linux发行版，这里就不兼顾了，不过方法都大同小异。
 
 第一篇挑个复杂点儿的，讲讲GnuPG `:-)`
 
-- - -
+<!-- start -->
 
 本篇将讲述Windows和Ubuntu下的GnuPG解决方案，同时也会对GnuPG背后的信息安全原理做一些简单的科普。GnuPG可用于隐私数据的加密和签名，以便对其进行安全的传输和存储。除GnuPG外，本篇介绍的软件还包括Windows下的[GnuPG Shell][4]、[GPGee][5]（GnuPG explorer extension）以及Ubuntu下的[Seahorse][6]。
 

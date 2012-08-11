@@ -55,3 +55,8 @@ img.align-left {
 .comments {
   margin-top: 60px;
 }
+
+.title-icon {
+  float: right;
+  margin: 0 0 10px 10px;
+}

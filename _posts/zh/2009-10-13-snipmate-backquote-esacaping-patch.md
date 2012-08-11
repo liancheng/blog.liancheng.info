@@ -5,6 +5,8 @@ category: dev-notes
 tags: tools vim
 ---
 
+<div class="title-icon"><img src="{{ site.attachment_dir }}2009-12-13-vim.jpg" alt="Vim Logo" /></div>
+
 <small>后记：snipMate当前已经在官方版本中支持反引号的转义了。</small>
 
 对于一套IDE来说，一个好的snippet管理工具可以大大提高程序员的工作效率。作为一个适应不了Emacs的Vim geek，Eclipse自带的代码补全、Visual Studio的Visual Assist插件、Emacs下由[Pluskid](http://blog.pluskid.org)荣誉出品的[yasnippet](http://code.google.com/p/yasnippet/)，都让我十分垂涎。之前曾经用过很长一段时间的[snippetEmu](http://www.vim.org/scripts/script.php?script_id=1318)（这也是Debian/Ubuntu vim-scripts包中所带的snippet插件），虽然确实有助于提高效率，却有诸多不足：视觉效果很不清爽，时不时还出些问题，最难忍的便是其晦涩不堪的snippet定义方式。后来也尝试过同事推荐的另一个已经不记得名字的插件，仍旧不趁手，又换回snippetEmu。

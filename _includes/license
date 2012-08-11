@@ -1,1 +1,15 @@
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/cn/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.5/cn/80x15.png" /></a>
+{% if page.locale == 'en' %}
+  <a rel="license" href="http://creativecommons.org/licenses/by/2.5/cn/deed.en_US">
+    <img alt="Creative Commons License" style="float:left;margin:0 4px 0 0;" src="http://i.creativecommons.org/l/by/2.5/cn/80x15.png" />
+  </a>
+  <a href="{{ page.url }}">This article</a> by <a href="{{ site.url }}about/">{{ site.author.name }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/cn/deed.en_US">Creative Commons Attribution 2.5 China Mainland License</a>.  If you have any questions, please <a href="mailto:{{ site.author.email }}">contact me</a>.
+{% else %}
+  <a rel="license" href="http://creativecommons.org/licenses/by/2.5/cn/">
+    <img alt="Creative Commons License" style="float:left;margin:0 4px 0 0;" src="http://i.creativecommons.org/l/by/2.5/cn/80x15.png" />
+  </a>
+  <a href="{{ page.url }}">本文</a>基于<a target="_blank" title="Creative Commons Attribution 2.5 China Mainland License" href="http://creativecommons.org/licenses/by/2.5/cn/">署名 2.5 中国大陆</a>许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名<a href="{{ site.url }}about/">{{ site.author.name }}</a>（包含本文链接）。如您有任何疑问或者授权方面的协商，请<a target="_blank" href="mailto:{{ site.author.email }}">联系我</a>。
+{% endif %}
+
+{% comment %}
+vim:ft=liquid sw=2 ts=2 sts=2 et wrap
+{% endcomment %}

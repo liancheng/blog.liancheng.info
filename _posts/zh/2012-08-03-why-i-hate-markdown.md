@@ -5,6 +5,8 @@ category: misc
 tags: markdown markup re-structured-text
 ---
 
+<div class="title-icon"><img src="{{ site.attachment_dir }}2012-08-03-markdown.png" alt="Markdown Pro Logo" width="128" /></div>
+
 TL;DR
 
 最近把blog从WordPress迁移到了Jekyll。方便起见，目前暂时托管在GitHub上。Jekyll内置了多种标记语言支持，可惜其中并不包含我最喜爱的[reStructuredText][2]（以下简称为reST）。虽然也有[现成的Jekyll reST插件][3]，但GitHub出于安全考虑禁用了Jekyll插件。在Jekyll内置支持的若干标记语言中比较了一番之后，决定开始用[Markdown][7]写文章。然而很快便发现，Markdown实在是让人爱不起来。这篇就来批一批Markdown。作为对比，我还会写一写同样的问题在reST中是怎么解决的。

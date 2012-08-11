@@ -5,15 +5,17 @@ category: translation
 tags: translation cpie-cn erlang
 ---
 
+<div class="title-icon"><img src="{{ site.attachment_dir }}2009-12-15-erlang.png" alt="Erlang Logo" /></div>
+
 链接：[《Erlang并发编程》第一部分][cpie-cn]
 
 从去年年中开始，利用闲暇时间零零散散地翻译Concurrent Programming in Erlang (Part 1)。完成了[序言][preface]、[致谢][ack]、[简介][intro]和[第1章][chapter-1]之后由于工作繁忙暂停了很久。今年年初，又重新捡起来，完成了[第2章][chapter-2]。同时也将原先的reStructuredText格式的译稿迁移到Sphinx上。借助Sphinx，将译稿切分、组织成了合理的工程目录。于是将译稿上传到了SVN，又在Erlang-China和TopLanguage发了[帖子][post]，正式发起[CPiE-CN项目][project]，召集了一批志愿译者，开始合作翻译剩余章节。
 
-<!-- start -->
-
 各位志愿者们动作都相当迅速，没多久便相继提交了各自负责章节的译稿。不过有些并非是Sphinx格式，需要再手工适配到Sphinx。有些即使是 Sphinx格式，一些排版和格式的细节处理也还不到位（有些译者还是Sphinx新手）。也有志愿者出于种种原因遗弃了认领的章节——不过没关系，考虑到本人本来就拖拉成性，所以特地在[译者须知][notice]中注明本项目没有任何进度压力……
 
 于是，适配非Sphinx格式译稿、整理其他译者的Sphinx译稿排版格式、校对所有译稿以及翻译惨遭遗弃的章节，就成了我剩下的工作。期间因为工作原因暂停过很长一段时间。不过说实话，由于暂停得实在太久，以至于后来工作不忙的时候也没能想起来……囧……咳，总之，断断续续一年，总算将全书主体 翻译完毕——“主体”的精确含义是：除附录B、E和参考文献列表以外的所有内容。
+
+<!-- start -->
 
 在此严重感谢无私贡献译稿的诸位志愿译者，他们是（按参与项目的时间次序排列）：
 
