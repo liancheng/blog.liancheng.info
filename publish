@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE=`basename $0`
+BASE=`dirname $0`
 WORK_DIR=`cd $BASE; pwd`
 SRC="$WORK_DIR/_site"
 DST="dreamhost:~/blog.liancheng.info"
