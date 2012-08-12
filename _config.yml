@@ -4,7 +4,7 @@ tagline: 'Good memory as slow HDD'
 description:
 url: http://liancheng.github.com/
 permalink: /:title
-exclude:
+exclude: [publish]
 paginate: 5
 pygments: true
 markdown: kramdown
