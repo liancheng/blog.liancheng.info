@@ -2,7 +2,7 @@
 
 BASE=`dirname $0`
 WORK_DIR=`cd $BASE; pwd`
-SRC="$WORK_DIR/_site"
-DST="dreamhost:~/blog.liancheng.info"
+SRC="$WORK_DIR/_site/"
+DST="dreamhost:~/blog.liancheng.info/"
 
 rsync -avze ssh $SRC $DST
