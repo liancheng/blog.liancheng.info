@@ -65,15 +65,15 @@ published: false
 
     事故发生之后，人们往往会认为事故中的重大故障在所难免，而事故之所以会发生，是因为当事从业人员在故障迫近时处理失当或玩忽职守。实际上当事人采取行动时完全是在冒险，他们并不确定自己的举措会导致什么结果。在不同情况下，这种不确定性在程度上时有不同。当事人的冒险举措在事故发生之后体现得尤为明显；这些举措在灾后分析中通常会被认为是不明智的。然而反过来看：即便处理得当，也不过是运气好；无论如何，他们的举措都无法被广泛接受。
 
-11. **风口浪尖上的举措方能化解一切模糊性。**
+11. **风口浪尖上的行动方能化解各种模糊性。**
 
-    各种机构都具有一定的模糊性，这种模糊性经常是蓄意造成的，它体现在经营目标、资源使用效率、运营成本、能够容忍多严重的潜在事故等多个方面。只有那些位于系统中风口浪尖位置上的从业人员的行动才能化解这些模糊性。发生事故之后，当事从业人员的行为往往会被判作“疏忽”或“违例”，但这类评判又带有严重的事后成见，往往无视业绩压力等其他诱因。
+    各种机构都具有一定的模糊性，这种模糊性经常是蓄意造成的，它体现在经营目标、资源使用效率、运营成本、能够容忍多严重的潜在事故等多个方面。只有那些位于系统中风口浪尖位置上的从业人员的行动才能化解这些模糊性。发生事故之后，当事从业人员的行为往往会被判作“疏忽”或“违例”，但这类评判又带有严重的事后成见，往往会忽视业绩压力等其他诱因。
 
 12. **从业人员是复杂系统中的适配元素。**
 
     Practitioners and first line management actively adapt the system to maximize production and minimize accidents.  These adaptations often occur on a moment by moment basis.  Some of these adaptations include: (1) Restructuring the system in order to reduce exposure of vulnerable parts to failure.  (2) Concentrating critical resources in areas of expected high demand.  (3) Providing pathways for retreat or recovery from expected and unexpected faults.  (4) Establishing means for early detection of changed system performance in order to allow graceful cutbacks in production or other means of increasing resiliency.
 
-    从业人员及一线管理层积极适应系统，以最大化生产效率，并最小化事故。
+    从业人员及一线管理层积极地适应系统，以便在尽量扩大产值的同时尽量减小发生事故的概率。这种适应每时每刻都在发生。其中包括：（1）重组系统，以防系统中的弱点暴露在故障面前。（2）合理调配稀缺资源。（3）
 
 13. **复杂系统中的专业人才不断地发生变化。**
 
