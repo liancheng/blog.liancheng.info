@@ -32,15 +32,19 @@ code {
   margin: 10px 0 20px; 0;
 }
 
-.search-query[placeholder] {
+.search-query [placeholder] {
   color: lightgray;
+}
+
+.search-query [value] {
+  color: black;
 }
 
 div.post {
   margin-bottom: 30px;
 }
 
-dd>ul.unstyled {
+dd > ul.unstyled {
   margin: 0;
 }
 
@@ -59,4 +63,8 @@ img.align-left {
 .title-icon {
   float: right;
   margin: 0 0 10px 10px;
+}
+
+.license {
+  margin-top: 20px;
 }

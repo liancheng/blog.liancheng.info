@@ -3,15 +3,12 @@ layout: post
 title: Why I hate Markdown (and prefer reST)
 category: misc
 tags: markdown markup re-structured-text
+language: zh
 ---
 
-.. raw:: html
-
-    <div class="title-icon">
-      <img src="{{ site.attachment_dir }}2012-08-03-markdown.png"
-           alt="Markdown Pro Logo"
-           width="128" />
-    </div>
+.. image:: {{ site.attachment_dir }}2012-08-03-markdown.png
+    :class: title-icon
+    :alt: Markdown Pro Logo
 
 TL;DR
 

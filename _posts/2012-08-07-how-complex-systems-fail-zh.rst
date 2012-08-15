@@ -3,27 +3,32 @@ layout: post
 title: '译：复杂系统故障面面观'
 category: translation
 tags: complex-systems catastrophic-failure
-published: false
+language: zh
+published: true
 ---
 
-<div class="title-icon"><img src="{{ site.attachment_dir }}2012-08-07-cloud.jpg" alt="Cloud Computing" width="200" height="160" /></div>
+.. image:: {{ site.attachment_dir }}2012-08-07-cloud.jpg
+    :class: title-icon
+    :alt: "Clound Computing"
 
-## 题记
+两个月前，Amazon EC2集群因雷暴天气导致电源故障进而宕机，拖垮了包括Netflix、Instagram、Pinterest在内的一大批服务。几天后，在Channel 9上看到\ `Tim O'Brien针对这次事故所写的一篇文章`__\ ，进而顺藤摸瓜找到了Richard Cook的这篇\ `How Complex Systems Fail`__\ 。这篇短文既没有抽象的模型，也没有艰涩的公式，然而寥寥十八条直观的经验性总结都可谓鞭辟入里、入木三分，令人击节叫好。有意思的是，Cook在文中讨论的是医疗IT系统，跟大规模互联网基础服务并没有太大关系，正所谓大道归一。文章并没有局限在技术领域，而是从复杂系统、事故当事人、事故评估等一系列角度全方位地讨论了复杂系统的故障性质，很好地论述了复杂系统故障中的“潜规则”。
 
-两个月前，Amazon EC2集群因雷暴天气导致电源故障进而宕机，拖垮了包括Netflix、Instagram、Pinterest在内的一大批服务。几天后，在Channel 9上看到[Tim O'Brien针对这次事故所写的一篇文章][1]，进而顺藤摸瓜找到了Richard Cook的这篇[How Complex Systems Fail][2]。这篇短文既没有抽象的模型，也没有艰涩的公式，然而寥寥十八条直观的经验性总结都可谓鞭辟入里、入木三分，令人击节叫好。有意思的是，Cook在文中讨论的是医疗IT系统，跟大规模互联网基础服务并没有太大关系，正所谓大道归一。文章并没有局限在技术领域，而是从复杂系统、事故当事人、事故评估等一系列角度全方位地讨论了复杂系统的故障性质，很好地论述了复杂系统故障中的“潜规则”。
+__ http://channel9.msdn.com/Blogs/Vector/How-Complex-Systems-Fail
+__ http://www.ctlab.org/documents/How%20Complex%20Systems%20Fail.pdf
 
-[1]: http://channel9.msdn.com/Blogs/Vector/How-Complex-Systems-Fail
-[2]: http://www.ctlab.org/documents/How%20Complex%20Systems%20Fail.pdf
+.. raw:: html
 
-<!-- start -->
+    <!-- more -->
 
-- - -
+----
 
-<center>
-  <h2>复杂系统故障面面观</h2>
-  <p>（一篇讨论故障性质的短文；如何评估故障；如何推测故障肇因；以及由此引出的针对病患安全的新认识）</p>
-  <p>Richard I. Cook, MD<br/>芝加哥大学认知技术实验室</p>
-</center>
+.. raw:: html
+
+    <center>
+      <h2>复杂系统故障面面观</h2>
+      <p>（一篇讨论故障性质的短文；如何评估故障；如何推测故障肇因；以及由此引出的针对病患安全的新认识）</p>
+      <p>Richard I. Cook, MD<br/>芝加哥大学认知技术实验室</p>
+    </center>
 
 1.  **复杂系统本质上都是高风险系统。**
 
@@ -51,11 +56,11 @@ published: false
 
 7.  **在事后将事故归咎于某项“罪魁祸首”的做法是完全错误的。**
 
-    由于重大故障皆由多重失误共同造成，事故没有孤立的“肇因”。在导致事故的多种因素之中，任何单一因素都不足以酿成事故。只有当这些因素叠加在一起时事故才得以发生。事实上，正是这些环环相扣的因素共同形成了滋生事故的温床。因此，事故背后根本就不存在孤立的“罪魁祸首”。在事故评估中将事故原因归咎于某项“罪魁祸首”，无助于从技术角度探求故障的性质；对部分特定势力及事件的责难不过是为了对社会及文化诉求的一种迎合。[^1]
+    由于重大故障皆由多重失误共同造成，事故没有孤立的“肇因”。在导致事故的多种因素之中，任何单一因素都不足以酿成事故。只有当这些因素叠加在一起时事故才得以发生。事实上，正是这些环环相扣的因素共同形成了滋生事故的温床。因此，事故背后根本就不存在孤立的“罪魁祸首”。在事故评估中将事故原因归咎于某项“罪魁祸首”，无助于从技术角度探求故障的性质；对部分特定势力及事件的责难不过是为了对社会及文化诉求的一种迎合。\ [#]_
 
 8.  **事后成见会扭曲事故评定人员的认知。**
 
-    在已知事故后果的情况下，人们会产生一种错觉，认为对于当事人来说酿成事故的各种事件应该要比实际情况来得更加显眼。这意味着人们难以客观地分析事故经过。了解事故后果的事故分析人员容易先入为主，从而难以站在当事人的视角上在相同条件下还原事故经过。当事人似乎“早就应该知道”这些因素“必然”会导致事故[^2]。事后成见一直是阻碍事故调查的主要障碍，有专家参与时尤其如此。
+    在已知事故后果的情况下，人们会产生一种错觉，认为对于当事人来说酿成事故的各种事件应该要比实际情况来得更加显眼。这意味着人们难以客观地分析事故经过。了解事故后果的事故分析人员容易先入为主，从而难以站在当事人的视角上在相同条件下还原事故经过。当事人似乎“早就应该知道”这些因素“必然”会导致事故\ [#]_\ 。事后成见一直是阻碍事故调查的主要障碍，有专家参与时尤其如此。
 
 9.  **运营人员分饰二角：既是故障的始作俑者，也是故障的抵御者。**
 
@@ -99,11 +104,7 @@ published: false
 
     Recognizing hazard and successfully manipulating system operations to remain inside the tolerable performance boundaries requires intimate contact with failure. More robust system performance is likely to arise in systems where operators can discern the “edge of the envelope”. This is where system performance begins to deteriorate, becomes difficult to predict, or cannot be readily recovered. In intrinsically hazardous systems, operators are expected to encounter and appreciate hazards in ways that lead to overall performance that is desirable. Improved safety depends on providing operators with calibrated views of the hazards. It also depends on providing calibration about how their actions move system performance towards or away from the edge of the envelope.
 
-[^1]: 脚注    
-[^2]: 脚注    
+.. [#] 脚注    
+.. [#] 脚注    
 
-<!-- end -->
-
-{% comment %}
-vim:ft=markdown.liquid wrap
-{% endcomment %}
+.. vim:ft=rst ts=4 sw=4 sts=4 et wrap

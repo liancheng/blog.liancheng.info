@@ -1,9 +1,9 @@
 ---
 layout: post
 title: GMP Notes
-locale: en
 category: dev-notes
 tags: gmp gnu dev c c++
+language: en
 ---
 
 .. image:: {{ site.attachment_dir }}2012-07-26-gnu.png

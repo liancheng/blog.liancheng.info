@@ -1,4 +1,4 @@
-{% if page.locale == 'en' %}
+{% if page.language == 'en' %}
   <a rel="license" href="http://creativecommons.org/licenses/by/2.5/cn/deed.en_US">
     <img alt="Creative Commons License" style="float:left;margin:0 4px 0 0;" src="http://i.creativecommons.org/l/by/2.5/cn/80x15.png" />
   </a>

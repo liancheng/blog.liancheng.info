@@ -5,14 +5,8 @@ title: 分布式相关文献共享
 tags: work distributed-system jabref
 ---
 
-.. raw:: html
-
-    <div class="title-icon">
-      <img src="{{ site.attachment_dir }}2010-07-24-thesis.jpg"
-           alt="Thesis"
-           width="200"
-           height="152" />
-    </div>
+.. image:: {{ site.attachment_dir }}2010-07-24-thesis.jpg
+    :class: title-icon
 
 去年从Google、Amazon分布式架构出发，针对分布式数据一致性和其他的一些分布式基本原理做了一些研究。期间搜集了一批文献，并用\ `JabRef`__\ 做了索引，现在共享出来供参考：
 
