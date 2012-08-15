@@ -24,3 +24,7 @@ BibTeX索引文件可以直接用JabRef或者其他兼容BibTeX格式的文献�
 __ http://jabref.sourceforge.net/
 __ http://liancheng.info/bib/
 __ http://liancheng.info/bib/bib.tar.gz
+
+.. raw:: html
+
+    <!-- more -->

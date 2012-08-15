@@ -6,15 +6,17 @@ category: dev-notes
 tags: gmp gnu dev c c++
 ---
 
-.. raw:: html
-
-    <div class="title-icon">
-      <img src="{{ site.attachment_dir }}2012-07-26-gnu.png" alt="GNU Logo" />
-    </div>
+.. image:: {{ site.attachment_dir }}2012-07-26-gnu.png
+    :class: title-icon
+    :alt: GNU Logo
 
 `GMP (the GNU MP library)`__ is a widely known library for arbitrary precision arithmetic on integers, rational numbers and floating-point numbers.  When using GMP in C/C++ projects, one must face some subtleties.
 
 __ http://gmplib.org/index.html
+
+.. raw:: html
+
+    <!-- more -->
 
 Using GMP in C
 ==============

@@ -21,7 +21,7 @@ tags: data-security tools gnu-pg open-pgp
 
 第一篇挑个复杂点儿的，讲讲GnuPG `:-)`
 
-<!-- start -->
+<!-- more -->
 
 本篇将讲述Windows和Ubuntu下的GnuPG解决方案，同时也会对GnuPG背后的信息安全原理做一些简单的科普。GnuPG可用于隐私数据的加密和签名，以便对其进行安全的传输和存储。除GnuPG外，本篇介绍的软件还包括Windows下的[GnuPG Shell][4]、[GPGee][5]（GnuPG explorer extension）以及Ubuntu下的[Seahorse][6]。
 
@@ -217,8 +217,6 @@ OpenPGP标准以及GnuPG作为成熟的个人隐私数据安全保障方案，�
 最后，希望这篇拙文能够在恶劣的大环境下帮助到更多人安全地完成数据交换，也就不枉我码这么多字的辛苦了 `:-)`
 
 P.S.: 第一次给图片打马赛克，GIMP的高斯模糊滤镜还真是蛮好用的。
-
-<!-- end -->
 
 [1]: http://www.gnupg.org/
 [2]: http://www.chinagfw.org/2009/11/ubuntu.html

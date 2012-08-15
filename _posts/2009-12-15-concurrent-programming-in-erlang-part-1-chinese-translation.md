@@ -15,7 +15,7 @@ tags: translation cpie-cn erlang
 
 于是，适配非Sphinx格式译稿、整理其他译者的Sphinx译稿排版格式、校对所有译稿以及翻译惨遭遗弃的章节，就成了我剩下的工作。期间因为工作原因暂停过很长一段时间。不过说实话，由于暂停得实在太久，以至于后来工作不忙的时候也没能想起来……囧……咳，总之，断断续续一年，总算将全书主体 翻译完毕——“主体”的精确含义是：除附录B、E和参考文献列表以外的所有内容。
 
-<!-- start -->
+<!-- more -->
 
 在此严重感谢无私贡献译稿的诸位志愿译者，他们是（按参与项目的时间次序排列）：
 
@@ -37,8 +37,6 @@ tags: translation cpie-cn erlang
 1.  CPiE-CN全部译稿使用[BY-NC-ND的CC协议][cc]许可。曾经在erlang-questions邮件组中询问过Joe大叔的意见，大叔称没问题并将邮件转发给了Prentice Hall出版社的编辑，不过出版社并没有回音。
 2.  曾经说要在DreamHost上折腾一个Trac用来做勘误，最终可耻地没有搞定。此事无限期顺延……没有寄宿到Google Code等站点的原因是这些站点不支持相应的CC许可协议。
 3.  今年3月14号翻译完第2章的时候本写过一篇blog。第二天便正式发布了CPiE-CN项目。在那篇里对长篇技术文档的撰写工具进行了探讨，盛赞了Sphinx，并对Erlang社区表达了无限的憧憬。然而，该篇blog后来由于未知原因（估计是误操作或WordPress升级事故）被不幸截肢，全文只剩下大约30%。可怜我在事发之后不知道多久才发现，遍寻Google Reader、Google Cache和百度Cache也找不到原来的全文，只好忍痛将该篇匿了，秘谋让该篇在全书译稿完成时再次涅磐。然而，昨天重新编辑了这篇blog后，发现RSS却没有更新，可能是跟发布时间等因素有关，只好又新开一篇。这件事情教育我们：一定要定期备份WordPress数据库啊！
-
-<!-- end -->
 
 [cpie-cn]:   http://cpie-cn.googlecode.com/hg/_build/html/index.html
 [preface]:   http://cpie-cn.googlecode.com/hg/_build/html/preface.html

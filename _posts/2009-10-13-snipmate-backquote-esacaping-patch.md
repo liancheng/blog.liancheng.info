@@ -13,7 +13,7 @@ tags: tools vim
 
 前两天无意中发现snipMate，试用之后大呼惊艳！虽然和snippetEmu同是模仿TextMate，snipMate要精致得多。Snippet的定义方式也非常灵活和人性化。只有一处让人不待见的地方，就是snippet定义必须像Makefile一样以tab开头。通读文档之后依照自己的代码风格改写了默认的C/C++ snippet文件，又录入了Emacs erlang-mode所带的几个OTP behaviour的snippet。把玩一番，爱不释手 `:-D`
 
-<!-- start -->
+<!-- more -->
 
 周末闲时接着翻译[《Erlang并发编程》](http://svn.liancheng.info/cpie-cn/trunk/.build/html/index.html)第9章，又想到snipMate。于是顺手定义了一个`rst.snippets`文件，用来简化reStructuredText格式中多种Markup的输入。其中有这么一个用于输入等宽格式文本的snippet：
 
@@ -66,5 +66,3 @@ snippet l
 简单测试了一下，大功告成！ `:-D` 开心之余屁颠地跑到snipMate的Google Code主页上去[提交了这个patch](http://code.google.com/p/snipmate/issues/detail?id=88&amp;colspec=ID%20Type%20Status%20Priority%20OS%20Summary)。说来再次可耻，虽然一直享着OpenSource的福，却从未正式提交过补丁，以至于我都不知道应该如何正确地提交一个补丁……Google了一把倒也迅速搞定。
 
 提交patch的时候写道：我是个Vim脚本新手，不敢说这个补丁有没有什么问题。果不其然，在写这篇blog的时候便发现果然有个bug：第81行的那个修改过的正则式``[^\\]`.\{-}` ``要求在反引号前必须有一个不是反斜杠的字符，于是当反引号位于行首时，就匹配失败了。上文提到的用于输入当前日期的snippet便会因此而被错误地展开（我也正是因为尝试这个snippet才发现这个bug的）。好在解决起来也简单，需要匹配的反引号对所应满足的条件应该是：第一个反引号位于行首或者前一个字符不是反斜杠。于是将正则式改为改成``\(^|[^\\]\)`.\{-}` ``就可以了。
-
-<!-- end -->
