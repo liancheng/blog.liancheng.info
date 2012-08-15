@@ -29,13 +29,13 @@ Using GMP in C
 
         All declarations needed to use GMP are collected in the include file ``gmp.h``.  It is designed to work with both C and C++ compilers.
 
-        .. code:: c
+        ::
 
             #include <gmp.h>
 
         Note however that prototypes for GMP functions with ``FILE *`` parameters are only provided if ``<stdio.h>`` is included too.
 
-        .. code:: c
+        ::
 
             #include <stdio.h>
             #include <gmp.h>
