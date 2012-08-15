@@ -68,3 +68,8 @@ img.align-left {
 .license {
   margin-top: 20px;
 }
+
+.MathJax .mo,
+.MathJax .mi {
+  color: inherit;
+}
