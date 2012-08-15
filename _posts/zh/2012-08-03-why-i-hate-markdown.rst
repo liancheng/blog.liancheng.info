@@ -29,10 +29,6 @@ __ http://daringfireball.net/projects/markdown/
 
     <small>后记：这里所说的互操作，主要指用不同的Markdown实现转换同一份Markdown文档。Jekyll支持自定义Markdown实现，然而一旦用了某种实现的特定扩展，今后想换一个Markdown实现的时候就郁闷了（例如原先用的是Maruku，并且用了它的meta syntax，后来因为性能原因换了rdiscount）。相较之下reST只有一份主流标准实现。</small>
 
-.. raw:: html
-
-   <!-- start -->
-
 Keep it simple stupid, but not too simple, please
 =================================================
 
@@ -298,9 +294,5 @@ __ http://www.ituring.com.cn/book/828
     ::
 
         Markdown中**粗体嵌套*斜体*也没问题**
-
-.. raw:: html
-
-   <!-- end -->
 
 .. vim:ft=rst wrap
