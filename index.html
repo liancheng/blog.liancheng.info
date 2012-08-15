@@ -9,7 +9,7 @@ title: Home
       <div class="post">
         {% assign the_post = post %}
         {% include post_header %}
-        {{ post.content | replace: 'start -->', '' | replace: '<!-- end', '' }}
+        {{ post.excerpt }}
         <p><a class="btn" href="{{ post.url }}">More...</a></p>
       </div>
     {% endfor %}
