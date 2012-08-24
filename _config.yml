@@ -13,9 +13,10 @@ attachment_dir: /attachment/
 author:
     name: 连城 (Lian Cheng)
     email: rhythm.mail@gmail.com
-    twitter: liancheng
-    github: liancheng
-    linkedin: liancheng
+    twitter: http://twitter.com/liancheng
+    github: http://github.com/liancheng
+    linkedin: http://cn.linkedin.com/in/liancheng
+    facebook: http://www.facebook.com/lianchengzju
 
 comments:
     provider: disqus
