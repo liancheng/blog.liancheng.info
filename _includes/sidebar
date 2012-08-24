@@ -1,5 +1,6 @@
 <div class="sidebar-nav">
   <ul class="nav nav-list">
+
     <li>{% include site_search %}</li>
 
     <li class="nav-header">Subscribe</li>
@@ -15,12 +16,24 @@
 
     <li class="nav-header">Categories</li>
     {% for cat in site.categories %}
-      <li><a href="/categories.html#category_{{ cat[0] }}"><i class="icon-folder-close"></i> {{ cat[0] }} ({{ cat[1].size }})</a></li>
+      <li>
+        <a href="/categories.html#category_{{ cat[0] }}">
+          <i class="icon-folder-close"></i>
+          {{ cat[0] }} ({{ cat[1].size }})
+        </a>
+      </li>
     {% endfor %}
 
     <li class="nav-header">Tags</li>
     {% for tag in site.tags %}
-      <li><a href="/tags.html#tag_{{ tag[0] }}"><i class="icon-tag"></i>{{ tag[0] }} ({{ tag[1].size }})</a></li>
+      <li>
+        <a href="/tags.html#tag_{{ tag[0] }}">
+          <i class="icon-tag"></i>
+          <span style="font-size: {{ tag[1].size | times: 2 | plus: 11 }}px;">
+            {{ tag[0] }}
+          </span>
+        </a>
+      </li>
     {% endfor %}
 
     <li class="nav-header">Archives</li>
@@ -50,6 +63,7 @@
         </li>
       {% endif %}
     {% endfor %}
+
   </ul>
 </div>
 
