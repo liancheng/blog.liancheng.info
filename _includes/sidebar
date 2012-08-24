@@ -10,16 +10,19 @@
     <li class="nav-header">Contact Me</li>
     <li><a href="/about.html"><i class="icon-user"></i> About me</a></li>
     <li><a href="mailto:{{ site.author.email }}"><i class="icon-envelope-alt"></i> E-mail</i></a></li>
-    <li><a href="http://cn.linkedin.com/in/{{ site.author.linkedin }}"><i class="icon-linkedin"></i> LinkedIn</a></li>
-    <li><a href="http://github.com/{{ site.author.github }}"><i class="icon-github"></i> GitHub</a></li>
-    <li><a href="http://twitter.com/{{ site.author.twitter }}"><i class="icon-twitter"></i> Twitter</a></li>
+    <li><a href="{{ site.author.facebook }}"><i class="icon-facebook-sign"></i> Facebook</a></li>
+    <li><a href="{{ site.author.github }}"><i class="icon-github"></i> GitHub</a></li>
+    <li><a href="{{ site.author.linkedin }}"><i class="icon-linkedin"></i> LinkedIn</a></li>
+    <li><a href="{{ site.author.twitter }}"><i class="icon-twitter"></i> Twitter</a></li>
 
     <li class="nav-header">Categories</li>
     {% for cat in site.categories %}
       <li>
         <a href="/categories.html#category_{{ cat[0] }}">
           <i class="icon-folder-close"></i>
-          {{ cat[0] }} ({{ cat[1].size }})
+          <span style="font-size: {{cat[1].size | times: 2 | plus: 11}}px;">
+            {{ cat[0] }} ({{ cat[1].size }})
+          </span>
         </a>
       </li>
     {% endfor %}
@@ -30,7 +33,7 @@
         <a href="/tags.html#tag_{{ tag[0] }}">
           <i class="icon-tag"></i>
           <span style="font-size: {{ tag[1].size | times: 2 | plus: 11 }}px;">
-            {{ tag[0] }}
+            {{ tag[0] }} ({{ tag[1].size }})
           </span>
         </a>
       </li>
@@ -47,7 +50,10 @@
       {% if date != posted_at %}
         <li>
           <a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">
-            <i class="icon-inbox"></i>{{ date }} ({{ count }})
+            <i class="icon-inbox"></i>
+            <span style="font-size: {{ count | times: 2 | plus: 11 }}px;">
+              {{ date }} ({{ count }})
+            </span>
           </a>
         </li>
         {% assign date = posted_at %}
@@ -58,7 +64,10 @@
       {% if forloop.last %}
         <li>
           <a href="/archives.html#archive_{{ post.date | date: '%Y_%m' }}">
-            <i class="icon-inbox"></i>{{ date }} ({{ count }})
+            <i class="icon-inbox"></i>
+            <span style="font-size: {{ count | times: 2 | plus: 11 }}px;">
+              {{ date }} ({{ count }})
+            </span>
           </a>
         </li>
       {% endif %}
