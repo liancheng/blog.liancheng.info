@@ -14,9 +14,7 @@ language: en
 
 __ http://gmplib.org/index.html
 
-.. raw:: html
-
-    <!-- more -->
+.. more
 
 Using GMP in C
 ==============

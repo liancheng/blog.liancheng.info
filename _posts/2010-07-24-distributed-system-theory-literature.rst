@@ -19,6 +19,4 @@ __ http://jabref.sourceforge.net/
 __ http://liancheng.info/bib/
 __ http://liancheng.info/bib/bib.tar.gz
 
-.. raw:: html
-
-    <!-- more -->
+.. more
