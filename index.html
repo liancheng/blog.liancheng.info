@@ -1,24 +1,17 @@
 ---
-layout: default
+layout: with_sidebar
 title: Home
 ---
 
-<div class="row-fluid">
-  <div class="span9">
-    {% for post in paginator.posts %}
-      <div class="post">
-        {% assign the_post = post %}
-        {% include post_header %}
-        {{ post.excerpt }}
-        <p><a class="btn" href="{{ post.url }}">More...</a></p>
-      </div>
-    {% endfor %}
-    {% include paginator %}
+{% for post in paginator.posts %}
+  <div class="post">
+    {% assign the_post = post %}
+    {% include post_header %}
+    {{ post.excerpt }}
+    <p><a class="btn" href="{{ post.url }}">More...</a></p>
   </div>
-  <div class="span3">
-    {% include sidebar %}
-  </div>
-</div>
+{% endfor %}
+{% include paginator %}
 
 {% comment %}}
 vim:ft=liquid
