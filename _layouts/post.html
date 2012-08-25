@@ -3,11 +3,13 @@ layout: with_sidebar
 comments: true
 ---
 
-{% assign the_post = page %}
-{% include post_header %}
-{{ content }}
-{% assign the_post = page %}
-{% include post_footer %}
+<div class="post">
+  {% assign the_post = page %}
+  {% include post_header %}
+  {{ content }}
+  {% assign the_post = page %}
+  {% include post_footer %}
+</div>
 
 {% comment %}
 vim:ft=liquid
