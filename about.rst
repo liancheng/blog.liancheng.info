@@ -8,17 +8,17 @@ title: "About Me"
     Name
         {{ site.author.name }}
 
-    Boarn
+    Born
         1984, China
 
     Contact me
         .. class:: unstyled
 
-        *   |icon-envelope-alt| `E-mail <mailto:{{ site.author.email }}>`_
-        *   |icon-facebook| `Facebook <{{ site.author.facebook }}>`_
-        *   |icon-github| `GitHub <{{ site.author.github }}>`_
-        *   |icon-linkedin| `LinkedIn <{{ site.author.linkedin }}>`_
-        *   |icon-twitter| `Twitter <{{ site.author.twitter }}>`_
+        *   |icon-envelope-alt| `E-mail   <mailto:{{ site.author.email }}>`_
+        *   |icon-facebook|     `Facebook <{{ site.author.facebook }}>`_
+        *   |icon-github|       `GitHub   <{{ site.author.github }}>`_
+        *   |icon-linkedin|     `LinkedIn <{{ site.author.linkedin }}>`_
+        *   |icon-twitter|      `Twitter  <{{ site.author.twitter }}>`_
 
     Experiences
         .. class:: unstyled
@@ -45,7 +45,7 @@ title: "About Me"
 
 .. |icon-envelope-alt| raw:: html
 
-    <i class="icon-email"></i>
+    <i class="icon-envelope-alt"></i>
 
 .. |icon-facebook| raw:: html
 
