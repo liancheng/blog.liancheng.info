@@ -1,9 +1,7 @@
-<div class="controls">
-  <form action="http://www.google.com/search" class="form-search" method="get">
-    <input type="hidden" value="{{ site.url }}" name="sitesearch" />
-    <input type="text" class="input-medium search-query" name="as_q" placeholder="Search" />
-  </form>
-</div>
+<form class="form-search" action="http://www.google.com/search" method="get">
+  <input type="text" class="span12 search-query" name="as_q" placeholder="Search" />
+  <input type="hidden" name="sitesearch" value="{{ site.url }}" />
+</form>
 
 {% comment %}
 vim:ft=liquid

@@ -5,16 +5,8 @@ blockquote {
   border: inherit;
 }
 
-
 blockquote p {
   font-size: inherit;
-}
-
-code {
-  padding: inherit;
-  color: inherit;
-  background-color: inherit;
-  border: none;
 }
 
 .page-header h1 {
@@ -30,14 +22,6 @@ code {
 
 .post-info {
   margin: 10px 0 20px; 0;
-}
-
-.search-query [placeholder] {
-  color: lightgray;
-}
-
-.search-query [value] {
-  color: black;
 }
 
 div.post {
