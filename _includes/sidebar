@@ -15,6 +15,10 @@
     <li><a href="{{ site.author.linkedin }}"><i class="icon-linkedin"></i> LinkedIn</a></li>
     <li><a href="{{ site.author.twitter }}"><i class="icon-twitter"></i> Twitter</a></li>
 
+    <li class="nav-header">My Book</li>
+    <li><a href="http://www.ituring.com.cn/book/828"><img src="/static/img/eaoia-zh.jpg" alt="《Erlang/OTP并发编程实战》" class="img-polaroid" /></a></li>
+    <li><a href="http://product.china-pub.com/3662181"><i class="icon-shopping-cart"></i> Buy</a></li>
+
     <li class="nav-header">Categories</li>
     {% for cat in site.categories %}
       <li>
