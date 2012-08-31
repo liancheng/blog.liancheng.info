@@ -40,11 +40,20 @@ dd > ul.unstyled {
 }
 
 img.align-right {
-  align: right;
+  text-align: right;
 }
 
 img.align-left {
-  align: left;
+  text-align: left;
+}
+
+img.align-center {
+  text-align: center;
+}
+
+.post img {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .comments {
@@ -79,4 +88,12 @@ table.footnote .label {
   -webkit-border-radius: inherit;
      -moz-border-radius: inherit;
           border-radius: inherit;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
 }

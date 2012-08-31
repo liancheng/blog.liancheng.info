@@ -5,6 +5,8 @@ title: 分布式相关文献共享
 tags: work distributed-system jabref
 ---
 
+{% include emoticon.rst %}
+
 .. image:: {{ site.attachment_dir }}2010-07-24-thesis.jpg
     :class: title-icon
 
@@ -13,7 +15,7 @@ tags: work distributed-system jabref
 *   `文献索引`__\ ，包含文献基本信息及各篇文献的独立下载链接，支持排序和检索
 *   `全部文献的压缩包`__\ ，约37MB，包含所有文献及BibTeX索引
 
-BibTeX索引文件可以直接用JabRef或者其他兼容BibTeX格式的文献管理工具进行编辑。共享出来的文献不仅仅包含分布式的内容，也有少量其他的东西，比如Erlang、LaTeX、魔方什么的，各取所需吧 ``:-P``
+BibTeX索引文件可以直接用JabRef或者其他兼容BibTeX格式的文献管理工具进行编辑。共享出来的文献不仅仅包含分布式的内容，也有少量其他的东西，比如Erlang、LaTeX、魔方什么的，各取所需吧 |tongue|
 
 __ http://jabref.sourceforge.net/
 __ http://liancheng.info/bib/

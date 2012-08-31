@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Emoticon";
+  src: url('../font/emoticons.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="emoticon-"]:before, [class*=" emoticon-"]:before {
+  font-family: Emoticon;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+a [class^="emoticon-"], a [class*=" emoticon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.emoticon-large:before {
+  vertical-align: top;
+  font-size: 1.3333333333333333em;
+  line-height: inherit;
+}
+
+li [class^="emoticon-"], li [class*=" emoticon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+
+li .emoticon-large[class^="emoticon-"], li .emoticon-large[class*=" emoticon-"] {
+  width: 1.875em;
+}
+
+li[class^="emoticon-"], li[class*=" emoticon-"] {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+li[class^="emoticon-"]:before, li[class*=" emoticon-"]:before {
+  text-indent: -2em;
+  text-align: center;
+}
+
+li[class^="emoticon-"].emoticon-large:before,
+li[class*=" emoticon-"].emoticon-large:before {
+  text-indent: -1.3333333333333333em;
+}
+
+.emoticon-smile:before    { content: "^"; }
+.emoticon-cool:before     { content: "r"; }
+.emoticon-mellow:before   { content: "C"; }
+.emoticon-laugh:before    { content: "m"; }
+.emoticon-tongue:before   { content: "p"; }
+.emoticon-evil:before     { content: "]"; }
+.emoticon-love:before     { content: "i"; }
+.emoticon-surprise:before { content: "v"; }
+.emoticon-angel:before    { content: "x"; }
+.emoticon-angry:before    { content: "W"; }
+.emoticon-sad:before      { content: "d"; }
+.emoticon-wink:before     { content: "K"; }
