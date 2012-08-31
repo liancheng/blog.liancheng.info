@@ -6,6 +6,8 @@ tags: data-security censorship im otr xmpp
 language: zh
 ---
 
+{% include emoticon.rst %}
+
 .. default-role:: math
 
 .. image:: {{ site.attachment_dir }}2010-02-03-censorship.gif
@@ -46,7 +48,7 @@ __ /personal-data-security-1-protect-personal-privacy-with-gnupg/
 Hosted.IM——搭建自己的IM服务器
 =============================
 
-既然整个环节的漏洞出在IM运营商处，那么不妨搭建自己的IM服务器吧 ``:-)`` 这里介绍的由\ `ProcessOne`__\ 提供的\ `Hosted.IM`__\ 是一个免费的XMPP托管服务，只需要一个域名即可。提供的功能包括群组聊天、文件传输、域间互通等等，详细说明参见\ `这里`__\ 。
+既然整个环节的漏洞出在IM运营商处，那么不妨搭建自己的IM服务器吧 |smile| 这里介绍的由\ `ProcessOne`__\ 提供的\ `Hosted.IM`__\ 是一个免费的XMPP托管服务，只需要一个域名即可。提供的功能包括群组聊天、文件传输、域间互通等等，详细说明参见\ `这里`__\ 。
 
 __ http://www.process-one.net/
 __ http://hosted.im
