@@ -9,6 +9,13 @@ blockquote p {
   font-size: inherit;
 }
 
+code {
+  padding: inherit;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+
 .page-header h1 {
   font-size: 60px;
   line-height: 1.5;
@@ -56,4 +63,20 @@ img.align-left {
 .MathJax .mo,
 .MathJax .mi {
   color: inherit;
+}
+
+/* Resets footnote label style */
+table.footnote .label {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-shadow: inherit;
+  white-space: inherit
+  vertical-align: inherit;
+  background-color: inherit;
+  padding: inherit;
+  -webkit-border-radius: inherit;
+     -moz-border-radius: inherit;
+          border-radius: inherit;
 }
