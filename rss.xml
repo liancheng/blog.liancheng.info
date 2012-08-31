@@ -14,14 +14,14 @@ layout: nil
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 
     {% for post in site.posts %}
-    <item>
-      <title>{{ post.title }}</title>
-      <link>{{ site.url }}{{ post.url }}</link>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-      <author>{{ site.author.name }}</author>
-      <guid>{{ site.url }}{{ post.id }}</guid>
-      <description>{{ post.content | xml_escape }}</description>
-    </item>
+      <item>
+        <title>{{ post.title }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <author>{{ site.author.name }}</author>
+        <guid>{{ site.url }}{{ post.id }}</guid>
+        <description>{{ post.content | xml_escape }}</description>
+      </item>
     {% endfor %}
   </channel>
 </rss>
