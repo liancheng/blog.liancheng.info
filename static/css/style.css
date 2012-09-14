@@ -84,7 +84,7 @@ table.footnote .label {
   white-space: inherit
   vertical-align: inherit;
   background-color: inherit;
-  padding: inherit;
+  padding-right: 5px;
   -webkit-border-radius: inherit;
      -moz-border-radius: inherit;
           border-radius: inherit;
@@ -96,4 +96,63 @@ table.footnote .label {
 
 .underline {
   text-decoration: underline;
+}
+
+.post .unsure {
+  background-color: yellow;
+}
+
+div.topic {
+  border: 1px solid #ccc;
+  padding: 7px 7px 0 7px;
+  margin: 10px 0 10px 0;
+  background-color: #f5f5f5;
+}
+
+p.topic-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+div.sidebar {
+    margin: 0 0 0.5em 1em;
+    border: 1px solid #ddb;
+    padding: 7px 7px 0 7px;
+    background-color: #ffe;
+    width: 40%;
+    float: right;
+}
+
+p.sidebar-title {
+    font-weight: bold;
+}
+
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+div.admonition dt {
+    font-weight: bold;
+}
+
+div.admonition dl {
+    margin-bottom: 0;
+}
+
+p.admonition-title {
+    margin: 0px 10px 5px 0px;
+    font-weight: bold;
+}
+
+div.body p.centered {
+    text-align: center;
+    margin-top: 25px;
+}
+
+p.rubric {
+    margin-top: 30px;
+    font-weight: bold;
 }
