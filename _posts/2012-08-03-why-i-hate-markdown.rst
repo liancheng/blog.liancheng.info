@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why I hate Markdown (and prefer reST)
+title: Why I hate markdown (and prefer reST)
 category: misc
 tags: markdown markup re-structured-text
 language: zh
@@ -26,10 +26,10 @@ __ http://daringfireball.net/projects/markdown/
 
 .. more
 
-Keep it simple stupid, but not too simple, please
-=================================================
+Keep It Stupidly Simple
+=======================
 
-Markdown很简单，这本是好事。然而不幸的是它实在是太简单了，以至于很多基本任务都无法完成，简直就是“简陋”。和其他标记语言一样，Markdown内置支持标题、加粗、斜体、链接等多种常用格式。同时，作为特色功能，Markdown还支持直接内嵌HTML代码。初次接触Markdown的时候，我还觉得这个设计挺不错：通过内置支持的简化格式覆盖80%的需求，通过内嵌HTML覆盖剩下的20%，很好！可惜现实并非如此。首先，Markdown的语法过于简陋，很多\ **基本的文档结构语义**\ 都无法表达；其次，Markdown生成的是\ **裸**\ HTML代码，不带任何CSS class信息，使得CSS样式套用非常不便；再次，Markdown的语法完全不可扩展，不可能在不修改具体实现代码的前提下解决上述问题。（注意我指的是Markdown语法的可扩展性，不是Markdown某具体实现在API层面的可扩展性。）
+Markdown很简单，这本是好事。然而不幸的是它实在是太过简单了，以至于连很多基本任务都无法完成，简直就是“简陋”。和其他标记语言一样，Markdown内置支持标题、加粗、斜体、链接等多种常用格式。同时，作为特色功能，Markdown还支持直接内嵌HTML代码。初次接触Markdown的时候，我还觉得这个设计挺不错：通过内置支持的简化格式覆盖80%的需求，通过内嵌HTML覆盖剩下的20%，很好！可惜现实并非如此。首先，Markdown的语法过于简陋，很多\ **基本的文档结构语义**\ 都无法表达；其次，Markdown生成的是\ **裸**\ HTML代码，不带任何CSS class信息，使得CSS样式套用非常不便；再次，Markdown的语法完全不可扩展，不可能在不修改具体实现代码的前提下解决上述问题。（注意我指的是Markdown语法的可扩展性，不是Markdown某具体实现在API层面的可扩展性。）
 
 文档结构语义问题
 ----------------
