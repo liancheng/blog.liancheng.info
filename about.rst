@@ -12,13 +12,7 @@ title: "About Me"
         1984, China
 
     Contact me
-        .. class:: unstyled
-
-        *   |icon-envelope-alt| `E-mail   <mailto:{{ site.author.email }}>`_
-        *   |icon-facebook|     `Facebook <{{ site.author.facebook }}>`_
-        *   |icon-github|       `GitHub   <{{ site.author.github }}>`_
-        *   |icon-linkedin|     `LinkedIn <{{ site.author.linkedin }}>`_
-        *   |icon-twitter|      `Twitter  <{{ site.author.twitter }}>`_
+        |icon-envelope-alt|_ |icon-facebook|_ |icon-github|_ |icon-linkedin|_ |icon-twitter|_
 
     Experiences
         .. class:: unstyled
@@ -62,6 +56,12 @@ title: "About Me"
 .. |icon-twitter| raw:: html
 
     <i class="icon-twitter"></i>
+
+.. _icon-envelope-alt: mailto:{{ site.author.email }}
+.. _icon-facebook: {{ site.author.facebook }}
+.. _icon-github: {{ site.author.github }}
+.. _icon-linkedin: {{ site.author.linkedin }}
+.. _icon-twitter: {{ site.author.twitter }}
 
 __ http://www.google.com/finance?q=NASDAQ:BIDU
 __ http://www.google.com/finance?q=NASDAQ:NTES
