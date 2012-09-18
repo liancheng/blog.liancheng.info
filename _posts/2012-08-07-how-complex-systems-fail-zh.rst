@@ -7,8 +7,6 @@ language: zh
 published: true
 ---
 
-.. role:: unsure
-
 .. image:: {{ site.attachment_dir }}2012-08-07-cloud.jpg
     :class: title-icon
     :alt: "Clound Computing"
