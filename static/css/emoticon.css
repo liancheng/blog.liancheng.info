@@ -19,8 +19,8 @@ a [class^="emoticon-"], a [class*=" emoticon-"] {
 }
 
 .emoticon-large:before {
-  vertical-align: top;
-  font-size: 1.3333333333333333em;
+  vertical-align: baseline;
+  font-size: 1em
   line-height: inherit;
 }
 
