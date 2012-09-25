@@ -4,6 +4,7 @@
     <i class="icon-pencil"></i>
     <a href="/archives.html#archive_{{ the_post.date | date: '%Y_%m' }}">{{ the_post.date | date: "%B %e, %Y" }}</a>
   </span>
+
   <span class="post-category">
     {% if the_post.categories %}
       <i class="icon-folder-close"></i>
@@ -13,19 +14,24 @@
       {% endfor %}
     {% endif %}
   </span>
+
   <span class="post-tags">
     <i class="icon-tags"></i>
     {% for tag in the_post.tags %}
       <a href="/tags.html#tag_{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </span>
+
   <span class="post-comments">
     <i class="icon-comments"></i>
     <a href="{{ site.url }}{{ the_post.url }}#disqus_thread">Comments</a>
   </span>
-  <div class="pull-right">
-    {% include sharethis_body %}
-  </div>
+
+  {% if page.share %}
+    <div class="pull-right">
+      {% include sharethis_body %}
+    </div>
+  {% endif %}
 </div>
 
 {% assign the_post = nil %}
