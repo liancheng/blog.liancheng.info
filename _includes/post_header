@@ -1,5 +1,5 @@
 <h1><a href="{{ the_post.url }}">{{ the_post.title }}</a></h1>
-<p class="post-info">
+<div class="post-info">
   <span class="post-date">
     <i class="icon-pencil"></i>
     <a href="/archives.html#archive_{{ the_post.date | date: '%Y_%m' }}">{{ the_post.date | date: "%B %e, %Y" }}</a>
@@ -21,9 +21,12 @@
   </span>
   <span class="post-comments">
     <i class="icon-comments"></i>
-    <a href="{{ site.url }}{{ the_post.url }}#disqus_thread">View Comments</a>
+    <a href="{{ site.url }}{{ the_post.url }}#disqus_thread">Comments</a>
   </span>
-</p>
+  <div class="pull-right">
+    {% include sharethis_body %}
+  </div>
+</div>
 
 {% assign the_post = nil %}
 
