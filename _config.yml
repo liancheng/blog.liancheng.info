@@ -2,7 +2,7 @@ pygments: true
 title: ':wq ~/notes'
 tagline: 'Good memory as slow HDD'
 description:
-url: http://blog.liancheng.info/
+url: http://blog.liancheng.info
 permalink: /:title
 exclude: [publish]
 paginate: 5
