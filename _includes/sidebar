@@ -1,8 +1,6 @@
 <div class="sidebar-nav">
   <ul class="nav nav-list">
     <li>{% include site_search %}</li>
-
-    <li class="nav-header">Share</li>
     <li>{% include addthis_body %}</li>
 
     <li class="nav-header">Subscribe</li>

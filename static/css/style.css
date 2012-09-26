@@ -156,3 +156,7 @@ p.rubric {
     margin-top: 30px;
     font-weight: bold;
 }
+
+.addthis_toolbox {
+    display: inline;
+}
