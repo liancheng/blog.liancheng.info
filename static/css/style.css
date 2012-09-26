@@ -103,10 +103,8 @@ table.footnote .label {
 }
 
 div.topic {
-  border: 1px solid #ccc;
   padding: 7px 7px 0 7px;
   margin: 10px 0 10px 0;
-  background-color: #f5f5f5;
 }
 
 p.topic-title {
@@ -117,9 +115,7 @@ p.topic-title {
 
 div.sidebar {
     margin: 0 0 0.5em 1em;
-    border: 1px solid #ddb;
     padding: 7px 7px 0 7px;
-    background-color: #ffe;
     width: 40%;
     float: right;
 }

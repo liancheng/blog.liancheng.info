@@ -1,12 +1,17 @@
-<div class="sidebar-nav">
+{% include site_search %}
+
+<div class="sidebar-nav well well-small">
   <ul class="nav nav-list">
-    <li>{% include site_search %}</li>
     <li>{% include addthis_body %}</li>
 
     <li class="nav-header">Subscribe</li>
     <li><a href="/rss.xml"><i class="icon-rss"></i> RSS</a></li>
     <li><a href="/atom.xml"><i class="icon-rss"></i> Atom</a></li>
+  </ul>
+</div>
 
+<div class="sidebar-nav well well-small">
+  <ul class="nav nav-list">
     <li class="nav-header">Contact Me</li>
     <li><a href="/about.html"><i class="icon-user"></i> About me</a></li>
     <li><a href="mailto:{{ site.author.email }}"><i class="icon-envelope-alt"></i> E-mail</i></a></li>
@@ -18,7 +23,11 @@
     <li class="nav-header">My Book</li>
     <li><a href="http://www.ituring.com.cn/book/828"><img src="/static/img/eaoia-zh.jpg" alt="《Erlang/OTP并发编程实战》" class="img-polaroid" /></a></li>
     <li><a href="http://product.china-pub.com/3662181"><i class="icon-shopping-cart"></i> Buy</a></li>
+  </ul>
+</div>
 
+<div class="sidebar-nav well well-small">
+  <ul class="nav nav-list">
     <li class="nav-header">Categories</li>
     {% for cat in site.categories %}
       <li>

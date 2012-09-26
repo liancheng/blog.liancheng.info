@@ -110,6 +110,7 @@ published: true
 .. [#] 这一现象并不局限在医疗诊断或技术领域内，它取决于人类对过往事件及其原因的认知模式。
 
 .. topic:: 疑难词汇译注
+    :class: well well-small
 
     .. class:: dl-horizontal
 
