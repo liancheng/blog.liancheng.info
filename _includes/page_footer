@@ -1,7 +1,9 @@
-<div class="row-fluid">
-  <div class="span12 page-footer">
-    Designed and provided by {{ site.author.name }}<br />
-    Powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a>, <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a> and <a href="http://www.dafont.com/emoticons.font">Emoticons</a>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12 page-footer">
+      Designed and provided by {{ site.author.name }}<br />
+      Powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a>, <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a> and <a href="http://www.dafont.com/emoticons.font">Emoticons</a>
+    </div>
   </div>
 </div>
 
