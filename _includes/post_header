@@ -26,12 +26,6 @@
     <i class="icon-comments"></i>
     <a href="{{ site.url }}{{ the_post.url }}#disqus_thread">Comments</a>
   </span>
-
-  {% if page.share %}
-    <div class="pull-right">
-      {% include sharethis_body %}
-    </div>
-  {% endif %}
 </div>
 
 {% assign the_post = nil %}

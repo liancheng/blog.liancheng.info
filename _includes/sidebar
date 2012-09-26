@@ -2,6 +2,9 @@
   <ul class="nav nav-list">
     <li>{% include site_search %}</li>
 
+    <li class="nav-header">Share</li>
+    <li>{% include addthis_body %}</li>
+
     <li class="nav-header">Subscribe</li>
     <li><a href="/rss.xml"><i class="icon-rss"></i> RSS</a></li>
     <li><a href="/atom.xml"><i class="icon-rss"></i> Atom</a></li>
