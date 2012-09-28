@@ -2,6 +2,10 @@
   {% include license %}
 </div>
 
+<div>
+  {% include addthis_body %}
+</div>
+
 <ul class="pager">
   {% if the_post.previous %}
     <li class="previous">
