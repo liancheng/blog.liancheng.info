@@ -12,7 +12,7 @@ language: zh
 
 TL;DR
 
-最近把blog从WordPress迁移到了Jekyll。方便起见，目前暂时托管在GitHub上。Jekyll内置了多种标记语言支持，可惜其中并不包含我最喜爱的\ `reStructuredText`__\ （以下简称为reST）。虽然也有\ `现成的Jekyll reST插件`__\ ，但GitHub出于安全考虑禁用了Jekyll插件。在Jekyll内置支持的若干标记语言中比较了一番之后，决定开始用\ `Markdown`__\ 写文章。然而很快便发现，Markdown实在是让人爱不起来。这篇就来批一批Markdown。作为对比，我还会写一写同样的问题在reST中是怎么解决的。
+最近把blog从WordPress迁移到了Jekyll。方便起见，目前暂时托管在GitHub上（更新：本blog已经从GitHub迁移至自购DreamHost主机）。Jekyll内置了多种标记语言支持，可惜其中并不包含我最喜爱的\ `reStructuredText`__\ （以下简称为reST）。虽然也有\ `现成的Jekyll reST插件`__\ ，但GitHub出于安全考虑禁用了Jekyll插件。在Jekyll内置支持的若干标记语言中比较了一番之后，决定开始用\ `Markdown`__\ 写文章。然而很快便发现，Markdown实在是让人爱不起来。这篇就来批一批Markdown。作为对比，我还会写一写同样的问题在reST中是怎么解决的。
 
 __ http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 __ https://github.com/xdissent/jekyll-rst
@@ -120,7 +120,7 @@ reST的解决方案
 
 .. compound::
 
-    现在我们来看看reST是如何解决这个问题的。ReST内置了多种\ `指令（directive）`__\ ，可用于表达数种复杂文档结构。其中一种便是\ `复合段落（compound paragraph)`__\ 指令：
+    现在我们来看看reST是如何解决这个问题的。ReST内置了多种\ `指令（directive）`__\ ，可用于表达数种复杂文档结构。其中一种便是\ `复合段落（compound paragraph）`__\ 指令：
 
     .. pull-quote::
 
