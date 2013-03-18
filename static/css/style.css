@@ -1,79 +1,59 @@
 blockquote {
   background: url("../img/blockquote.gif") no-repeat scroll 0px 5px transparent;
-  color: rgb(116, 116, 116);
+  color: #747474;
   padding-left: 35px;
   border: inherit;
 }
-
 blockquote p {
   font-size: inherit;
 }
-
 code {
   padding: inherit;
   color: inherit;
   background-color: inherit;
   border: none;
 }
-
 .page-header h1 {
   font-size: 60px;
   line-height: 1.5;
 }
-
 .page-footer {
   color: gray;
   text-align: right;
   margin: 30px 0 20px 0;
 }
-
 .post-info {
-  margin: 10px 0 20px; 0;
+  margin: 10px 0 20px 0;
 }
-
-div.post {
-  margin-bottom: 30px;
-}
-
 dd > ul.unstyled {
   margin: 0;
 }
-
-img.align-right {
+img .align-right {
   text-align: right;
 }
-
-img.align-left {
+img .align-left {
   text-align: left;
 }
-
-img.align-center {
+img .align-center {
   text-align: center;
 }
-
 .post img {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }
-
 .comments {
   margin-top: 60px;
 }
-
 .title-icon {
   float: right;
   margin: 0 0 10px 10px;
 }
-
 .license {
   margin-top: 20px;
 }
-
 .MathJax .mo,
 .MathJax .mi {
   color: inherit;
 }
-
 /* Resets footnote label style */
 table.footnote .label {
   font-size: inherit;
@@ -81,78 +61,70 @@ table.footnote .label {
   line-height: inherit;
   color: inherit;
   text-shadow: inherit;
-  white-space: inherit
+  white-space: inherit;
   vertical-align: inherit;
   background-color: inherit;
   padding-right: 5px;
   -webkit-border-radius: inherit;
-     -moz-border-radius: inherit;
-          border-radius: inherit;
+  -moz-border-radius: inherit;
+  border-radius: inherit;
 }
-
 .strike {
   text-decoration: line-through;
 }
-
 .underline {
   text-decoration: underline;
 }
-
 .post .unsure {
   background-color: yellow;
 }
-
-div.topic {
+div .post {
+  margin-bottom: 30px;
+}
+div .topic {
   padding: 7px 7px 0 7px;
   margin: 10px 0 10px 0;
 }
-
-p.topic-title {
-  font-size: 1.1em;
-  font-weight: bold;
+div .sidebar {
+  margin: 0 0 0.5em 1em;
+  padding: 7px 7px 0 7px;
+  width: 40%;
+  float: right;
+}
+div .admonition {
   margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
 }
-
-div.sidebar {
-    margin: 0 0 0.5em 1em;
-    padding: 7px 7px 0 7px;
-    width: 40%;
-    float: right;
+div .admonition dt {
+  font-weight: bold;
 }
-
-p.sidebar-title {
-    font-weight: bold;
+div .admonition dl {
+  margin-bottom: 0;
 }
-
-div.admonition {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 7px;
+div .body p.centered {
+  text-align: center;
+  margin-top: 25px;
 }
-
-div.admonition dt {
-    font-weight: bold;
+.bold-title {
+  font-weight: bold;
 }
-
-div.admonition dl {
-    margin-bottom: 0;
+p .topic-title {
+  font-size: 1.1em;
+  margin-top: 10px;
+  font-weight: bold;
 }
-
-p.admonition-title {
-    margin: 0px 10px 5px 0px;
-    font-weight: bold;
+p .sidebar-title {
+  font-weight: bold;
 }
-
-div.body p.centered {
-    text-align: center;
-    margin-top: 25px;
+p .admonition-title {
+  margin: 0px 10px 5px 0px;
+  font-weight: bold;
 }
-
-p.rubric {
-    margin-top: 30px;
-    font-weight: bold;
+p .rubric {
+  margin-top: 30px;
+  font-weight: bold;
 }
-
 .addthis_toolbox {
-    display: inline;
+  display: inline;
 }
