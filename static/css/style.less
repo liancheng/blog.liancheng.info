@@ -29,10 +29,6 @@ code {
   margin: 30px 0 20px 0;
 }
 
-.post-info {
-  margin: 10px 0 20px 0;
-}
-
 dd > ul.unstyled {
   margin: 0;
 }
@@ -51,17 +47,8 @@ img {
   }
 }
 
-.post img {
-  margin: 20px 0 20px 0;
-}
-
 .comments {
   margin-top: 60px;
-}
-
-.title-icon {
-  float: right;
-  margin: 0 0 10px 10px;
 }
 
 .license {
@@ -100,13 +87,26 @@ table {
   text-decoration: underline;
 }
 
-.post .unsure {
-  background-color: yellow;
-}
-
 div {
   .post {
     margin-bottom: 30px;
+
+    &-info {
+      margin: 10px 0 20px 0;
+    }
+
+    .unsure {
+      background-color: yellow;
+    }
+
+    img {
+      &.title-icon {
+        float: right;
+        margin: 0 0 10px 10px;
+      }
+
+      margin: 20px 0 20px 0;
+    }
   }
 
   .topic {

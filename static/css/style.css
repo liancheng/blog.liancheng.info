@@ -22,9 +22,6 @@ code {
   text-align: right;
   margin: 30px 0 20px 0;
 }
-.post-info {
-  margin: 10px 0 20px 0;
-}
 dd > ul.unstyled {
   margin: 0;
 }
@@ -37,15 +34,8 @@ img .align-left {
 img .align-center {
   text-align: center;
 }
-.post img {
-  margin: 20px 0 20px 0;
-}
 .comments {
   margin-top: 60px;
-}
-.title-icon {
-  float: right;
-  margin: 0 0 10px 10px;
 }
 .license {
   margin-top: 20px;
@@ -75,11 +65,21 @@ table.footnote .label {
 .underline {
   text-decoration: underline;
 }
-.post .unsure {
-  background-color: yellow;
-}
 div .post {
   margin-bottom: 30px;
+}
+div .post-info {
+  margin: 10px 0 20px 0;
+}
+div .post .unsure {
+  background-color: yellow;
+}
+div .post img {
+  margin: 20px 0 20px 0;
+}
+div .post img.title-icon {
+  float: right;
+  margin: 0 0 10px 10px;
 }
 div .topic {
   padding: 7px 7px 0 7px;
