@@ -1,6 +1,6 @@
 pygments: true
 title: ':wq ~/notes'
-tagline: 'Good memory as slow HDD'
+tagline: ''
 description:
 url: http://blog.liancheng.info
 permalink: /:title
@@ -11,7 +11,7 @@ markdown: kramdown
 attachment_dir: /attachment/
 
 author:
-    name: 连城 (Lian Cheng)
+    name: 连城 (Lian, Cheng)
     email: rhythm.mail@gmail.com
     twitter: http://twitter.com/liancheng
     github: http://github.com/liancheng
