@@ -5,7 +5,7 @@ category: translation
 tags: translation cpie-cn erlang
 ---
 
-<div class="title-icon"><img src="{{ site.attachment_dir }}2009-12-15-erlang.png" alt="Erlang Logo" /></div>
+<img class="title-icon" src="{{ site.attachment_dir }}2009-12-15-erlang.png" alt="Erlang Logo" />
 
 链接：[《Erlang并发编程》第一部分][cpie-cn]
 

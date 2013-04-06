@@ -5,7 +5,7 @@ category: dev-notes
 tags: tools vim
 ---
 
-<div class="title-icon"><img src="{{ site.attachment_dir }}2009-12-13-vim.jpg" alt="Vim Logo" /></div>
+<img class="title-icon" src="{{ site.attachment_dir }}2009-12-13-vim.jpg" alt="Vim Logo" />
 
 <small>后记：snipMate当前已经在官方版本中支持反引号的转义了。</small>
 
