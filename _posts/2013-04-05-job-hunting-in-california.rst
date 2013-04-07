@@ -67,6 +67,8 @@ __ http://www.cnblogs.com/figure9/archive/2013/01/09/2853649.html
 
     LeetCode可以说是结合了CareerCup和ZOJ、TopCoder的优点：既有真题，又有OJ。而且当OJ判定代码错误时，会同时输出对应的测试用例，大大方便了调试。在面试准备的后期，我完全转向了LeetCode，训练效果显著。对了，目前\ `LeetCode后台的C++编译器已升级到g++ 4.7.2`__\ ，支持大部分C++11特性（尚不支持lambda），写起C++来舒心不少 :-) 就这次的经验来看，实际面试题的难度跟LeetCode的平均难度相差无几。缺点则是题量较少，目前仅有100多题，覆盖面较窄（例如二叉树的题有一大堆，而图论题则几乎没有）。
 
+__ https://twitter.com/LeetCode/status/299889197727240194
+
 这里引用Cat在\ `他的Facebook面经`__\ 中说的一段话：
 
     让我「大开眼界」的是面试题，原来真正好的面试题并不在于它有多难，而在于它有多简单，简单到熟悉这个领域的人一下子就明白到你在说什么以及想问什么。能够进入 Facebook 的人应该都觉得面试不难，至少跟中国的面试对比起来如此，那是因为 Facebook 把觉得面试有点难的人都过滤掉了，而中国那些很难的面试反而没什么区分度。
@@ -79,8 +81,6 @@ __ http://www.cnblogs.com/cathsfz/archive/2012/11/05/facebook-interview-experien
 .. _CareerCup: http://www.careercup.com
 .. _ZOJ: http://acm.zju.edu.cn
 .. _TopCoder: http://community.topcoder.com/tc
-
-__ https://twitter.com/LeetCode/status/299889197727240194
 
 英语沟通
 --------
