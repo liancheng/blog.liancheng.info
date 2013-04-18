@@ -37,7 +37,9 @@ __ http://rashost.com/putty-ssh-tunnel
 
 第一篇挑个复杂点儿的，讲讲GnuPG |smile|
 
-.. more
+.. class:: more
+
+****
 
 本篇将讲述Windows和Ubuntu下的GnuPG解决方案，同时也会对GnuPG背后的信息安全原理做一些简单的科普。GnuPG可用于隐私数据的加密和签名，以便对其进行安全的传输和存储。除GnuPG外，本篇介绍的软件还包括Windows下的\ `GnuPG Shell`__\ 、\ `GPGee`__\ （GnuPG explorer extension）以及Ubuntu下的\ `Seahorse`__\ 。
 

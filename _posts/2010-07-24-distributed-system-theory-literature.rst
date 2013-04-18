@@ -21,4 +21,6 @@ __ http://jabref.sourceforge.net/
 __ http://liancheng.info/bib/
 __ http://liancheng.info/bib/bib.tar.gz
 
-.. more
+.. class:: more
+
+****

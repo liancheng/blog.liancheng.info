@@ -24,7 +24,9 @@ __ http://daringfireball.net/projects/markdown/
 
 后记：这里所说的互操作，主要指用不同的Markdown实现转换同一份Markdown文档。Jekyll支持自定义Markdown实现，然而一旦用了某种实现的特定扩展，今后想换一个Markdown实现的时候就郁闷了（例如原先用的是Maruku，并且用了它的meta syntax，后来因为性能原因换了rdiscount）。相较之下reST只有一份主流标准实现。
 
-.. more
+.. class:: more
+
+****
 
 Keep It Stupidly Simple
 =======================

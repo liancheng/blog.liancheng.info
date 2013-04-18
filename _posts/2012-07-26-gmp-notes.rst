@@ -14,8 +14,6 @@ language: en
 
 __ http://gmplib.org/index.html
 
-.. more
-
 Using GMP in C
 ==============
 
@@ -43,6 +41,10 @@ Using GMP in C
     (I wonder why GMP doesn't include these required header files itself?)
 
 __ http://gmplib.org/manual/Headers-and-Libraries.html#Headers-and-Libraries
+
+.. class:: more
+
+****
 
 Using GMP C API in C++
 ======================

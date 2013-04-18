@@ -21,7 +21,7 @@ tags: python renren twitter xiaonei xmpp
 *   用[urllib2][7]登录Twitter发推
 *   [PyXMPP][8]登录校内发送`<presence/>`消息更新状态
 
-<!-- more -->
+<hr class="more docutils" />
 
 估摸着复杂度不高，于是放言[应该可以在50行以内搞定][9]，心想最多一个晚上也就差不多了。然而事实证明我过于乐观了。仅仅是在Twitter上，我这个可耻的HTTP盲就撞了两次南墙：
 

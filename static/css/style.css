@@ -128,3 +128,8 @@ p .rubric {
 .addthis_toolbox {
   display: inline;
 }
+hr.more {
+  border-style: none;
+  border-width: 0px;
+  margin: 0px;
+}

@@ -25,7 +25,9 @@ __ http://www.chinagfw.org/2009/09/qq_23.html
 __ http://xijie.wordpress.com/2009/08/26/%E3%80%90%E6%B3%A8%E6%84%8F%E3%80%91%E4%B8%AD%E6%96%87%E7%89%88google-talk%E6%98%AF%E6%9C%AA%E5%8A%A0%E5%AF%86%E6%98%8E%E6%96%87%E4%BC%A0%E8%BE%93%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9/
 __ http://www.google.com/support/forum/p/other/thread?tid=5ee3c6dc35225996&amp;hl=zh-CN
 
-.. more
+.. class:: more
+
+****
 
 Why?
 ====

@@ -13,7 +13,7 @@ tags: tools vim
 
 前两天无意中发现snipMate，试用之后大呼惊艳！虽然和snippetEmu同是模仿TextMate，snipMate要精致得多。Snippet的定义方式也非常灵活和人性化。只有一处让人不待见的地方，就是snippet定义必须像Makefile一样以tab开头。通读文档之后依照自己的代码风格改写了默认的C/C++ snippet文件，又录入了Emacs erlang-mode所带的几个OTP behaviour的snippet。把玩一番，爱不释手 `:-D`
 
-<!-- more -->
+<hr class="more docutils" />
 
 周末闲时接着翻译[《Erlang并发编程》](http://svn.liancheng.info/cpie-cn/trunk/.build/html/index.html)第9章，又想到snipMate。于是顺手定义了一个`rst.snippets`文件，用来简化reStructuredText格式中多种Markup的输入。其中有这么一个用于输入等宽格式文本的snippet：
 
