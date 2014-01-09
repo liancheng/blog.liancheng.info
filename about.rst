@@ -17,6 +17,7 @@ title: "About Me"
     Experiences
         .. class:: unstyled
 
+        *   2013.6 -- now, China and Intel IoT Labs, Researcher
         *   2008.3 -- 2012.8, Baidu.com, Inc. (`BIDU`__), Principle Software Engineer
         *   2006.4 -- 2008.3, NetEase Research Hangzhou (`NTES`__), Software Engineer
 
